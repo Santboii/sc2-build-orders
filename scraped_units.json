@@ -1,0 +1,800 @@
+{
+    "Archon": {
+        "name": "Archon",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/56/Icon_Protoss_Archon.jpg/revision/latest?cb=20160106175702",
+        "description": "Created by merging two templar units, the archon is a powerful melee unit with a very durable force shield and a strong energy-based attack.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Carrier": {
+        "name": "Carrier",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/2c/Icon_Protoss_Carrier.jpg/revision/latest?cb=20160106180238",
+        "description": "A powerful air unit. Carriers do not have their own attacks but create interceptors to fight for them.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Colossus": {
+        "name": "Colossus",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/40/Icon_Protoss_Colossus.jpg/revision/latest?cb=20160106180305",
+        "description": "The large quad-legged vehicle fires lasers in a splash pattern well-suited to destroying swarms of weaker units. This unit can also traverse differences in terrain height due to its long legs, and will appear to step over ledges and other obstacles due to the inverse kinematics system.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Dark Templar": {
+        "name": "Dark Templar",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/90/Icon_Protoss_Dark_Templar.jpg/revision/latest?cb=20160106180327",
+        "description": "A permanently cloaked stealth warrior.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "High Templar": {
+        "name": "High Templar",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a0/Icon_Protoss_High_Templar.jpg/revision/latest?cb=20160106180343",
+        "description": "A physically fragile unit with strong psychic abilities.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Immortal": {
+        "name": "Immortal",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/c1/Icon_Protoss_Immortal.jpg/revision/latest?cb=20160106180358",
+        "description": "Dragoon-like walker with a strong defense against powerful attacks, but vulnerable to weaker attacks.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Mothership": {
+        "name": "Mothership",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/e/e1/Icon_Protoss_Mothership.jpg/revision/latest?cb=20160106180429",
+        "description": "A powerful flying unit that consumes a high amount of resources to produce. It has powerful special abilities.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Observer": {
+        "name": "Observer",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/0a/Icon_Protoss_Observer.jpg/revision/latest?cb=20160106180448",
+        "description": "A cloaking air unit that functions as a detector.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Phoenix": {
+        "name": "Phoenix",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/b/b1/Icon_Protoss_Phoenix.jpg/revision/latest?cb=20160106180507",
+        "description": "An aerial fighter with an anti-gravity ability that lifts ground units into the air.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Probe": {
+        "name": "Probe",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/57/Icon_Protoss_Probe.jpg/revision/latest?cb=20160106180521",
+        "description": "The builder of the protoss race. Gathers gas and minerals.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Sentry": {
+        "name": "Sentry",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/ab/Icon_Protoss_Sentry.jpg/revision/latest?cb=20160106180539",
+        "description": "Formerly known as the disruptor,[1] and the nullifier before that.[2] A ground support unit.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Stalker": {
+        "name": "Stalker",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/0d/Icon_Protoss_Stalker.jpg/revision/latest?cb=20160106180555",
+        "description": "A dragoon-like Nerazim unit, able to blink (short-range teleport) and deliver ranged attacks against air and ground units.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Void Ray": {
+        "name": "Void Ray",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1d/VoidRay_SC2_Rend1.jpg/revision/latest?cb=20090129011444",
+        "description": "Formerly known as the warp ray,[3] this flying unit deals damage with a blue energy beam that does more damage as it focuses on the same target. Good against heavily armored targets like buildings, weak against small arms fire.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Warp Prism": {
+        "name": "Warp Prism",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1f/Icon_Protoss_Warp_Prism.jpg/revision/latest?cb=20160106180644",
+        "description": "Formerly known as the phase prism,[4] the warp prism is a dual-purpose unit, able to transport units or to create a warp matrix field like the pylon.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Zealot": {
+        "name": "Zealot",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/6e/Icon_Protoss_Zealot.jpg/revision/latest?cb=20160106180701",
+        "description": "Melee unit with the ability to charge, allowing it to quickly close the distance between itself and an enemy unit.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Assimilator": {
+        "name": "Assimilator",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/74/Icon_Protoss_Assimilator.jpg/revision/latest?cb=20160106231703",
+        "description": "Allows probes to harvest vespene gas from geysers.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Cybernetics Core": {
+        "name": "Cybernetics Core",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/97/Icon_Protoss_Cybernetics_Core.jpg/revision/latest?cb=20160106231716",
+        "description": "Allows for the warping in of stalkers and sentries. Also allows research of weapon and armor upgrades for air units.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Dark Shrine": {
+        "name": "Dark Shrine",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a9/Icon_Protoss_Dark_Shrine.jpg/revision/latest?cb=20160106231728",
+        "description": "Formerly known as the dark obelisk,[5] it allows dark templar to be warped in.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Fleet Beacon": {
+        "name": "Fleet Beacon",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3e/Icon_Protoss_Fleet_Beacon.jpg/revision/latest?cb=20160106231740",
+        "description": "Allows the carrier and the mothership to be warped in.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Forge": {
+        "name": "Forge",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/f/f8/Icon_Protoss_Forge.jpg/revision/latest?cb=20160106231751",
+        "description": "Allows the construction of photon cannons and research of Protoss ground unit upgrades.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Gateway": {
+        "name": "Gateway",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/23/Icon_Protoss_Gateway.jpg/revision/latest?cb=20160106231803",
+        "description": "Warps in the zealot, the stalker, the sentry, the high templar, and the dark templar.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Nexus": {
+        "name": "Nexus",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/f/f9/Icon_Protoss_Nexus.jpg/revision/latest?cb=20160106231816",
+        "description": "Produces probes and is the place that all minerals and gas are dropped off at to be processed. Also produces the mothership.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Photon Cannon": {
+        "name": "Photon Cannon",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a3/Icon_Protoss_Photon_Cannon.jpg/revision/latest?cb=20160106231827",
+        "description": "A defensive structure with a ranged attack effective against ground and air units.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Pylon": {
+        "name": "Pylon",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/c0/Icon_Protoss_Pylon.jpg/revision/latest?cb=20160106231837",
+        "description": "The protoss supply building; it produces a radius of energy that is a requisite for the placement of most other protoss structures.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Robotics Bay": {
+        "name": "Robotics Bay",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/6a/Icon_Protoss_Robotics_Bay.jpg/revision/latest?cb=20160106231910",
+        "description": "Formerly known as the null circuit,[6][7] this structure enables a robotics facility to produce colossi and contains upgrades for observers and warp prisms.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Robotics Facility": {
+        "name": "Robotics Facility",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/8a/Icon_Protoss_Robotics_Facility.jpg/revision/latest?cb=20160106231854",
+        "description": "Warps in the warp prism, observer, colossus, and immortal.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Stargate": {
+        "name": "Stargate",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/b/bb/Icon_Protoss_Stargate.jpg/revision/latest?cb=20160106231924",
+        "description": "Warps in the phoenix, void ray and carrier.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Templar Archives": {
+        "name": "Templar Archives",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1c/Icon_Protoss_Templar_Archives.jpg/revision/latest?cb=20160106231937",
+        "description": "Allows the high templar unit to be warped in.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Twilight Council": {
+        "name": "Twilight Council",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3c/Icon_Protoss_Twilight_Council.jpg/revision/latest?cb=20160106231949",
+        "description": "Contains upgrades for stalkers and zealots.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Warp Gate": {
+        "name": "Warp Gate",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/05/Icon_Protoss_Warp_Gate.jpg/revision/latest?cb=20160106232001",
+        "description": "The gateway has the ability to transform into a warp gate, which can warp-in units at any spot within the psionic matrix.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Mothership Core": {
+        "name": "Mothership Core",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/4a/Icon_Protoss_Mothership_Core.jpg/revision/latest?cb=20160106231111",
+        "description": "A base defense unit that can overcharge structures, recall allies and slow enemies. Can be upgraded into the mothership.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Oracle": {
+        "name": "Oracle",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/4b/Icon_Protoss_Oracle.jpg/revision/latest?cb=20160106231013",
+        "description": "A light, psionic, support and harassment ship. Can grant vision and harass light units and workers with its pulsar beam.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Tempest": {
+        "name": "Tempest",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a4/Icon_Protoss_Tempest.jpg/revision/latest?cb=20160106231047",
+        "description": "A long-range capital ship that excels at taking down massive units.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Adept": {
+        "name": "Adept",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/91/Icon_Protoss_Adept.jpg/revision/latest?cb=20160106231127",
+        "description": "Ground-only ranged attack unit, armed with psionic transfer ability to teleport to nearby locations for harassment.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Disruptor": {
+        "name": "Disruptor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/64/Icon_Protoss_Disruptor.jpg/revision/latest?cb=20160106231158",
+        "description": "Light ground mechanized support unit, armed with energy spikes to wreak havoc against swaths of ground forces.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Shield Battery": {
+        "name": "Shield Battery",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/db/ShieldBattery_SC2-LotV_Rend1.jpg/revision/latest?cb=20151205045214",
+        "description": "Recharges the shields of protoss units and defensive structures.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Stasis Ward": {
+        "name": "Stasis Ward",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3c/StasisWard_LotV_Game1.JPG/revision/latest?cb=20160812214218",
+        "description": "Cloaked structure created by the Oracle. Used to freeze incoming units.",
+        "race": "Protoss",
+        "type": "unit"
+    },
+    "Auto-Turret": {
+        "name": "Auto-Turret",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/54/Auto-turret_SC2_Icon1.jpg/revision/latest?cb=20160119023949",
+        "description": "An automated defensive combat structure produced by the Raven.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Banshee": {
+        "name": "Banshee",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/32/Banshee_SC2_Icon1.jpg/revision/latest?cb=20160107022109",
+        "description": "A cloak-capable gunship able to only attack ground-based targets.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Battlecruiser": {
+        "name": "Battlecruiser",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/f/f5/Battlecruiser_SC2_Icon1.jpg/revision/latest?cb=20160107022138",
+        "description": "The capital ship of the terran fleet, this powerful spacecraft is capable of firing a Yamato Cannon that deals large damage to a single target.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Ghost": {
+        "name": "Ghost",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/6e/Ghost_SC2_Icon1.jpg/revision/latest?cb=20160107022212",
+        "description": "Stealth specialist with access to several powerful and different abilities than in StarCraft I.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Hellion": {
+        "name": "Hellion",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/56/Hellion_SC2_Icon1.jpg/revision/latest?cb=20160107022248",
+        "description": "Formerly known as the jackal, this fast vehicle is armed with a flamethrower[8][9] suited for destroying masses of weaker units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Marauder": {
+        "name": "Marauder",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/b/ba/Marauder_SC2_Icon1.jpg/revision/latest?cb=20160107022315",
+        "description": "The replacement for the firebat.[10] Its attack slows enemy units and deals high damage against armored units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Marine": {
+        "name": "Marine",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/47/Marine_SC2_Icon1.jpg/revision/latest?cb=20160107022344",
+        "description": "The basic terran infantry, able to upgrade hit points with a shield.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Medivac": {
+        "name": "Medivac",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/db/Medivac_SC2_Icon1.jpg/revision/latest?cb=20160107022416",
+        "description": "A dual-purpose unit combining the old dropship and the medic, it is capable of transporting ground units and healing infantry.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "MULE": {
+        "name": "MULE",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/04/MULE_SC2_Icon1.jpg/revision/latest?cb=20160107022519",
+        "description": "A temporary unit summoned by an orbital command that harvests minerals for a limited time span.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Point Defense Drone": {
+        "name": "Point Defense Drone",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3d/Point_defense_drone_SC2_Icon1.jpg/revision/latest?cb=20160119023727",
+        "description": "A device which intercepts incoming shots produced by the Raven.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Raven": {
+        "name": "Raven",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d8/Raven_SC2_Icon1.jpg/revision/latest?cb=20160107022547",
+        "description": "Formerly known as the nighthawk, vulkan[11] and nomad, this air detector creates smaller independent munitions.[12]",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Reaper": {
+        "name": "Reaper",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/7d/Reaper_SC2_Icon1.jpg/revision/latest?cb=20160107022927",
+        "description": "Exceptionally fast infantry that uses dual pistols, can jet pack up and down ledges and uses explosives against buildings.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "SCV": {
+        "name": "SCV",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/61/SCV_SC2_Icon1.jpg/revision/latest?cb=20160107022653",
+        "description": "The builder and resource gatherer of the terran race. Its Repair ability can be set to \"autocast\".",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Siege Tank": {
+        "name": "Siege Tank",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/57/SiegeTank_SC2_Icon1.jpg/revision/latest?cb=20160107022749",
+        "description": "Terran tank that can transform into a stationary 'siege cannon' mode, allowing it to strike targets at a greater range.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Thor": {
+        "name": "Thor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/e/ef/Thor_SC2_Icon1.jpg/revision/latest?cb=20160107022814",
+        "description": "This intimidating mechanical unit is named after the Norse god of thunder. Can deal splash damage to air units and fire powerful cannons at ground targets.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Viking": {
+        "name": "Viking",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/2a/Viking_SC2_Icon1.jpg/revision/latest?cb=20160107022849",
+        "description": "This terran vehicle can transform between a walking robot and a spacecraft.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Armory": {
+        "name": "Armory",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/cb/Armory_SC2_Icon1.jpg/revision/latest?cb=20160107023923",
+        "description": "Upgrades mechanical units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Barracks": {
+        "name": "Barracks",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/4b/Barracks_SC2_Icon1.jpg/revision/latest?cb=20160107024033",
+        "description": "Produces terran infantry units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Bunker": {
+        "name": "Bunker",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/c5/Bunker_SC2_Icon1.jpg/revision/latest?cb=20160107024055",
+        "description": "Provides protection for terran infantry.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Command Center": {
+        "name": "Command Center",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/9e/CommandCenter_SC2_Icon1.jpg/revision/latest?cb=20160107024135",
+        "description": "Produces SCVs and serves as a drop off point for processing of minerals and gas. Has the ability to carry up to five SCVs and can upgrade to the powerfully armed planetary fortress or the ability oriented orbital command.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Engineering Bay": {
+        "name": "Engineering Bay",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/7e/EngineeringBay_SC2_Icon1.jpg/revision/latest?cb=20160107024456",
+        "description": "Upgrades infantry and buildings.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Factory": {
+        "name": "Factory",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a8/Factory_SC2_Icon1.jpg/revision/latest?cb=20160107024519",
+        "description": "Produces terran vehicle units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Fusion Core": {
+        "name": "Fusion Core",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1f/FusionCore_SC2_Icon1.jpg/revision/latest?cb=20160107024547",
+        "description": "Formerly known as the anti-matter core[13] and the deep space relay, this structure allows production of battlecruisers and provides researches for them.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Ghost Academy": {
+        "name": "Ghost Academy",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1c/GhostAcademy_SC2_Icon1.jpg/revision/latest?cb=20160107024614",
+        "description": "This structure enables ghosts to be produced and provides researches for them. In addition, it stores nuclear missiles for launch.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Missile turret": {
+        "name": "Missile turret",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/5f/MissileTurret_SC2_Icon1.jpg/revision/latest?cb=20160107024639",
+        "description": "Anti-air turret that fires two missiles at a time.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Orbital Command": {
+        "name": "Orbital Command",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/ca/OrbitalCommand_SC2_Icon1.jpg/revision/latest?cb=20160107024229",
+        "description": "This upgrade to the command center provides scanner sweeps to reveal troop movements through the fog of war and detect cloaked or burrowed units, summons MULEs, and can increase the supply generated by supply depots.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Planetary Fortress": {
+        "name": "Planetary Fortress",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/90/PlanetaryFortress_SC2_Icon1.jpg/revision/latest?cb=20160107024345",
+        "description": "This immobile upgrade of the command center grants it weapons to attack enemy ground units and a large boost to armor.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Refinery": {
+        "name": "Refinery",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/9e/Refinery_SC2_Icon1.jpg/revision/latest?cb=20160107024701",
+        "description": "Refines vespene gas for collection by SCVs.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Sensor Tower": {
+        "name": "Sensor Tower",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d2/SensorTower_SC2_Icon1.jpg/revision/latest?cb=20160107024757",
+        "description": "Can sense enemy units through the fog of war.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Starport": {
+        "name": "Starport",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/21/Starport_SC2_Icon1.jpg/revision/latest?cb=20160107024816",
+        "description": "Produces terran air units.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Supply Depot": {
+        "name": "Supply Depot",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/09/SupplyDepot_SC2_Icon1.jpg/revision/latest?cb=20160107024834",
+        "description": "Provides supply required for additional terran units and can submerge, enabling troops to walk over it. It is smaller than in StarCraft I and can be made into an important part of terran base defenses, preventing enemy units from walking past them. This ability is called Lower/Raise.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Reactor": {
+        "name": "Reactor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/85/Reactor_SC2_Icon1.jpg/revision/latest?cb=20160107024915",
+        "description": "Doubles the number of units produced from the building to which it is attached (for instance, adding one to a barracks will enable it to create two marines at the same time).",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Tech Lab": {
+        "name": "Tech Lab",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/8e/TechLab_SC2_Icon1.jpg/revision/latest?cb=20160107024940",
+        "description": "Enables the production of \"higher tech\" units. For instance, adding a tech lab to a barracks will allow it to produce marauders, while adding one to a factory will enable it to build siege tanks. Upgrades marine combat shields and specific upgrades and special abilities for the hellion, siege tank, viking, banshee, medivac dropship, and raven.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Hellbat": {
+        "name": "Hellbat",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/13/Hellbat_SC2-HotS_Icon1.jpg/revision/latest?cb=20160107025249",
+        "description": "Transformable variant unit from the hellion, better equipped for close combat.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Widow Mine": {
+        "name": "Widow Mine",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3b/WidowMine_SC2-HotS_Icon1.jpg/revision/latest?cb=20160107025320",
+        "description": "Mobile defensive unit, buries and launches missiles at foes.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Cyclone": {
+        "name": "Cyclone",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/94/Cyclone_SC2-LotV_Icon1.jpg/revision/latest?cb=20160107025444",
+        "description": "Mobile assault unit, armed with twin Typhoon missile pods that engage air and ground threats.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Liberator": {
+        "name": "Liberator",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/91/Liberator_SC2-LotV_Icon1.jpg/revision/latest?cb=20160107025400",
+        "description": "Transformable medium-sized gunship, armed with anti-ground cannons after transforming into a stationary air platform.",
+        "race": "Terran",
+        "type": "unit"
+    },
+    "Baneling": {
+        "name": "Baneling",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/81/Icon_Zerg_Baneling.jpg/revision/latest?cb=20160106232838",
+        "description": "This green rolling unit is mutated from the zergling. It has a huge suicidal attack. A huge swarm of banelings will create devastating results to an enemy's base.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Brood lord": {
+        "name": "Brood lord",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/2b/Icon_Zerg_Brood_Lord.jpg/revision/latest?cb=20160106233254",
+        "description": "High hit point aerial ground attacker which replaced the swarm guardian, evolving from the corruptor.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Broodling": {
+        "name": "Broodling",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/46/Icon_Zerg_Broodling.jpg/revision/latest?cb=20160106232656",
+        "description": "Produced from destroyed buildings and brood lord attacks.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Changeling": {
+        "name": "Changeling",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/a4/Icon_Zerg_Changeling.jpg/revision/latest?cb=20160106232716",
+        "description": "A spy created by the overseer that morphs into enemy units.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Corruptor": {
+        "name": "Corruptor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d0/Icon_Zerg_Corruptor.jpg/revision/latest?cb=20160106233308",
+        "description": "Attacks and \"corrupts\" other air units, increasing damage taken.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Drone": {
+        "name": "Drone",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d1/Icon_Zerg_Drone.jpg/revision/latest?cb=20160106233237",
+        "description": "Harvests resources and spawns structures. Is sacrificed when creating new structures.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Hydralisk": {
+        "name": "Hydralisk",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/42/Icon_Zerg_Hydralisk.jpg/revision/latest?cb=20160106233216",
+        "description": "Basic ranged attacker of the zerg swarm.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Infested terran": {
+        "name": "Infested terran",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/7a/Icon_Zerg_Infested_Terran.jpg/revision/latest?cb=20160106232746",
+        "description": "Spawned by the infestor, hardier versions of the normal terran marine but with a limited lifespan.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Infestor": {
+        "name": "Infestor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/c1/Icon_Zerg_Infestor.jpg/revision/latest?cb=20160106233153",
+        "description": "Zerg spellcaster. Provides ground support and can move while burrowed.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Larva": {
+        "name": "Larva",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/84/Icon_Zerg_Larva.jpg/revision/latest?cb=20160106233133",
+        "description": "The core genus of the zerg, larvae can mutate into other zerg breeds.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Mutalisk": {
+        "name": "Mutalisk",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/f/fd/Icon_Zerg_Mutalisk.jpg/revision/latest?cb=20160106233117",
+        "description": "The basic air offensive unit of the zerg with high movement speed.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Overlord": {
+        "name": "Overlord",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/4c/Icon_Zerg_Overlord.jpg/revision/latest?cb=20160106233052",
+        "description": "Produces control and is no longer a detector like the StarCraft I version.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Overseer": {
+        "name": "Overseer",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/e/e4/Icon_Zerg_Overseer.jpg/revision/latest?cb=20160106233030",
+        "description": "A spellcaster evolution of the overlord. Works as a detector and has numerous special abilities.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Queen": {
+        "name": "Queen",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/8/85/Icon_Zerg_Queen.jpg/revision/latest?cb=20160106233007",
+        "description": "The new queen is very different than its StarCraft I counterpart, being a powerful attacking ground dwelling support unit ideal for zerg defense.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Roach": {
+        "name": "Roach",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/73/Icon_Zerg_Roach.jpg/revision/latest?cb=20160106232950",
+        "description": "Exceptionally tough short ranged unit able to quickly regenerate and move while burrowed.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Ultralisk": {
+        "name": "Ultralisk",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/37/Icon_Zerg_Ultralisk.jpg/revision/latest?cb=20160106232927",
+        "description": "Massive zerg melee attacker able to deal splash damage with its melee attack. Also has a headbut attack against buildings. Other differences from its StarCraft I counterpart are it now having four kaiser blades instead of two, and its ability to burrow.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Zergling": {
+        "name": "Zergling",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/ae/Icon_Zerg_Zergling.jpg/revision/latest?cb=20160106232911",
+        "description": "Fast but weak melee attacker ideal for swarming attacks in large numbers.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Baneling Nest": {
+        "name": "Baneling Nest",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/99/Icon_Zerg_Baneling_Nest.jpg/revision/latest?cb=20160107000025",
+        "description": "Required for baneling production and researches baneling upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Creep Tumor": {
+        "name": "Creep Tumor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/39/Icon_Zerg_Creep_Tumor.jpg/revision/latest?cb=20160107000013",
+        "description": "This burrowed structure resembling an eyeball extends the creep, much like the creep colony in StarCraft I. Creep tumors are spawned by queens and each can spawn one additional creep tumor.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Evolution Chamber": {
+        "name": "Evolution Chamber",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/4/43/Icon_Zerg_Evolution_Chamber.jpg/revision/latest?cb=20160107000003",
+        "description": "Provides basic upgrades for the zerg ground units.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Extractor": {
+        "name": "Extractor",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/1/1b/Icon_Zerg_Extractor.jpg/revision/latest?cb=20160106235953",
+        "description": "Allows drones to extract vespene gas.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Greater Spire": {
+        "name": "Greater Spire",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/2a/Icon_Zerg_Greater_Spire.jpg/revision/latest?cb=20160106235632",
+        "description": "Upgrade of the spire, enables production of brood lords.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Hatchery": {
+        "name": "Hatchery",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/05/Icon_Zerg_Hatchery.jpg/revision/latest?cb=20160106235939",
+        "description": "Spawns larvae to be morphed into other zerg strains, generates creep and digests minerals and gas into a usable form. The queen is spawned directly from the hatchery.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Hive": {
+        "name": "Hive",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/36/Icon_Zerg_Hive.jpg/revision/latest?cb=20160106235851",
+        "description": "Upgrade of the lair giving access to the most advanced buildings.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Hydralisk Den": {
+        "name": "Hydralisk Den",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/0b/Icon_Zerg_Hydralisk_Den.jpg/revision/latest?cb=20160106235827",
+        "description": "Required for the production of hydralisks and researches hydralisk upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Infestation Pit": {
+        "name": "Infestation Pit",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/2/20/Icon_Zerg_Infestation_Pit.jpg/revision/latest?cb=20160106235813",
+        "description": "Enables creation of infestors and researches infestor upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Lair": {
+        "name": "Lair",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/a/ad/Icon_Zerg_Lair.jpg/revision/latest?cb=20160106235925",
+        "description": "Upgrade of the hatchery giving access to more advanced buildings and providing upgrades for overlords and overseers.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Nydus Network": {
+        "name": "Nydus Network",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/7/77/Icon_Zerg_Nydus_Network.jpg/revision/latest?cb=20160106235751",
+        "description": "Enables creation of nydus worms and acts as an entrance to the nydus transport system.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Nydus Worm": {
+        "name": "Nydus Worm",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/c/cd/Icon_Zerg_Nydus_Worm.jpg/revision/latest?cb=20160106235740",
+        "description": "The new transport structure for the zerg, similar to the nydus canal of StarCraft I. Produced from the nydus network. Unlike nydus canals which could only be placed on creep, nydus worms may be spawned anywhere within sight range.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Roach Warren": {
+        "name": "Roach Warren",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/dc/Icon_Zerg_Roach_Warren.jpg/revision/latest?cb=20160106235726",
+        "description": "Enables production of roaches and researches roach upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Spawning Pool": {
+        "name": "Spawning Pool",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/f/f7/Icon_Zerg_Spawning_Pool.jpg/revision/latest?cb=20160106235709",
+        "description": "Required for production of zerglings and queens and researches zergling upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Spine Crawler": {
+        "name": "Spine Crawler",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/6/6a/Icon_Zerg_Spine_Crawler.jpg/revision/latest?cb=20160106235654",
+        "description": "A mobile creep-bound defensive structure that attacks ground units.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Spire": {
+        "name": "Spire",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/9/97/Icon_Zerg_Spire.jpg/revision/latest?cb=20160106235643",
+        "description": "Required to produce mutalisks and corruptors and provides upgrades for aerial units.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Spore Crawler": {
+        "name": "Spore Crawler",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/5/56/Icon_Zerg_Spore_Crawler.jpg/revision/latest?cb=20160106235617",
+        "description": "A mobile creep-bound anti-air defensive structure.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Ultralisk Cavern": {
+        "name": "Ultralisk Cavern",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/0/09/Icon_Zerg_Ultralisk_Cavern.jpg/revision/latest?cb=20160106235305",
+        "description": "Required to produce ultralisks and researches ultralisk upgrades.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Swarm Host": {
+        "name": "Swarm Host",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/b/b2/Icon_Zerg_Swarm_Host.jpg/revision/latest?cb=20160106234810",
+        "description": "Siege unit, spawns timed locusts to send at targets.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Viper": {
+        "name": "Viper",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/3/3c/Icon_Zerg_Viper.jpg/revision/latest?cb=20160106234746",
+        "description": "Aerial support unit, able to blind groups of ranged units and abduct enemy units to its position.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Lurker": {
+        "name": "Lurker",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d7/Icon_Zerg_Lurker.jpg/revision/latest?cb=20160106234656",
+        "description": "A long ranged siege unit that evolves from the hydralisk. Must burrow to attack, but does damage in a line.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Ravager": {
+        "name": "Ravager",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/b/b7/Icon_Zerg_Ravager.jpg/revision/latest?cb=20160106234631",
+        "description": "An artillery unit that evolves from the roach. Can use corrosive bile to destroy force fields and hit clumps of units at range.",
+        "race": "Zerg",
+        "type": "unit"
+    },
+    "Lurker Den": {
+        "name": "Lurker Den",
+        "imageUrl": "https://static.wikia.nocookie.net/starcraft/images/d/d1/LurkerDen_SC2_Icon1.png/revision/latest?cb=20160411135201",
+        "description": "Enables hydralisks to morph into lurkers. Contains upgrades for lurkers.",
+        "race": "Zerg",
+        "type": "unit"
+    }
+}
