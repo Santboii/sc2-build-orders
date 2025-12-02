@@ -33,24 +33,13 @@ export default function UnitTooltip({
         large: '3rem'
     };
 
-    // If no unit data or image failed/not loaded yet, show emoji
-    if (!unitData || imageError || !unitData.imageUrl) {
-        return fallbackIcon ? (
-            <span style={{ fontSize: emojiSizeMap[size] }}>
-                {fallbackIcon}
-            </span>
-        ) : null;
+    // If no unit data, return null
+    if (!unitData) {
+        return null;
     }
 
     return (
         <div className="unit-tooltip-container" style={{ display: 'inline-block', position: 'relative' }}>
-            {/* Show emoji while image is loading */}
-            {!imageLoaded && fallbackIcon && (
-                <span style={{ fontSize: emojiSizeMap[size] }}>
-                    {fallbackIcon}
-                </span>
-            )}
-
             <img
                 src={unitData.imageUrl}
                 alt={unitData.name}
@@ -60,7 +49,8 @@ export default function UnitTooltip({
                     objectFit: 'contain',
                     verticalAlign: 'middle',
                     imageRendering: 'crisp-edges',
-                    display: imageLoaded ? 'inline-block' : 'none'
+                    opacity: imageLoaded ? 1 : 0,
+                    transition: 'opacity 0.2s ease-in-out'
                 }}
                 onLoad={() => setImageLoaded(true)}
                 onError={() => {
@@ -68,6 +58,19 @@ export default function UnitTooltip({
                     setImageLoaded(false);
                 }}
             />
+
+            {/* Show loading placeholder if image hasn't loaded yet */}
+            {!imageLoaded && !imageError && (
+                <div style={{
+                    width: sizeMap[size],
+                    height: sizeMap[size],
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    borderRadius: '4px'
+                }} />
+            )}
 
             {showTooltip && imageLoaded && (
                 <div className="unit-tooltip-content">

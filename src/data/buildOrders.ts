@@ -46,7 +46,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Fast tech Protoss', 'Greedy expansions'],
         weaknesses: ['Strong early Stalker defense', 'Disruptor tech'],
         author: 'Clem',
-        patch: '5.0.11',
+        patch: '5.0.14',
         videoUrl: 'https://www.youtube.com/watch?v=358Arl8IInk'
     },
     {
@@ -82,7 +82,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Greedy expansions', 'Slow tank builds'],
         weaknesses: ['Early Bunker defense', 'Siege Tanks'],
         author: 'uThermal',
-        patch: '5.0.11',
+        patch: '5.0.14',
         videoUrl: 'https://www.youtube.com/watch?v=Z0szkUNWE8o'
     },
 
@@ -135,7 +135,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Roach timings', 'Greedy Zerg play'],
         weaknesses: ['Lurker tech', 'Nydus all-ins'],
         author: 'Joaco',
-        patch: '5.0.11',
+        patch: '5.0.14',
         videoUrl: 'https://www.youtube.com/watch?v=3Seqh9MyTkY'
     },
     {
@@ -179,7 +179,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Greedy tech builds', 'Robo-heavy compositions'],
         weaknesses: ['Strong Immortal defense', 'Archon drops'],
         author: 'MaxPax',
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
 
     // ============================================================================
@@ -226,7 +226,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Greedy Terran play', 'Fast third Command Center'],
         weaknesses: ['Bunker walls', 'Tank positioning'],
         author: 'PiG',
-        patch: '5.0.11',
+        patch: '5.0.14',
         videoUrl: 'https://www.youtube.com/watch?v=A9m2VsBPPvQ&t=8456s'
     },
     {
@@ -263,7 +263,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Greedy Protoss tech', 'Fast third Nexus'],
         weaknesses: ['Early Immortal defense', 'Strong wall-offs'],
         author: 'Serral',
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'hatch-first-macro-zvz',
@@ -302,7 +302,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Roach/Hydra for ground armies, Mutalisk for air control, or Lurkers for positional play',
         counters: ['Greedy Zerg play', 'Slow Roach builds'],
         weaknesses: ['12 Pool all-ins', 'Early Roach pressure'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
 
     // ============================================================================
@@ -346,7 +346,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Add more Factories, get +2 upgrades, expand to third',
         counters: ['Greedy Zerg macro', 'Roach/Ravager timings'],
         weaknesses: ['Ling/Bane all-ins', 'Nydus attacks'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: '2-1-1-tvt',
@@ -385,7 +385,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Bio with Medivacs and Tanks, or transition to Mech with more Factories',
         counters: ['Greedy expansions', 'Air-heavy play'],
         weaknesses: ['Early Marine pressure', 'Banshee rush'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
 
     // ============================================================================
@@ -428,7 +428,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Add Robotics for Immortals/Disruptors, or more Stargates for air',
         counters: ['Roach timings', 'Greedy Zerg'],
         weaknesses: ['12 Pool all-ins', 'Nydus attacks'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: '2base-archon-immortal-pvp',
@@ -465,7 +465,7 @@ export const buildOrders: BuildOrder[] = [
         ],
         counters: ['Greedy tech', 'Robo-heavy builds'],
         weaknesses: ['Early Stalker pressure', 'Strong Immortal defense'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'immortal-allin-pvt',
@@ -503,7 +503,7 @@ export const buildOrders: BuildOrder[] = [
         counters: ['Greedy Terran play', 'Fast third base'],
         weaknesses: ['Bunker walls', 'Early Liberators'],
         author: 'ShaDoWn',
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'grandmaster-pvz',
@@ -543,7 +543,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Continue Chargelot/Archon, add Disruptors or Storm',
         counters: ['Roach timings', 'Greedy Zerg'],
         weaknesses: ['Lurker tech', 'Nydus all-ins'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
 
     // ============================================================================
@@ -585,7 +585,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Continue Roach/Hydra, add Lurkers or Vipers',
         counters: ['Oracle harassment', 'Phoenix openings'],
         weaknesses: ['Ground all-ins', 'Immortal pushes'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'zvp-vs-twilight',
@@ -623,7 +623,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Add Lurkers for defense, or Vipers for late game',
         counters: ['Chargelot timings', 'Blink Stalker attacks'],
         weaknesses: ['Disruptor tech', 'Storm'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'zvt-standard',
@@ -661,7 +661,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Roach/Hydra vs bio, Muta/Ling/Bane vs mech',
         counters: ['Greedy Terran', 'Fast third CC'],
         weaknesses: ['Bunker rushes', 'Tank pushes'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: '12pool-zvz',
@@ -698,7 +698,7 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Continue Roach production, add Hydras or Mutas',
         counters: ['Hatch first', 'Greedy play'],
         weaknesses: ['14 Pool with good defense', 'Spine Crawlers'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'roach-ravager-zvp',
@@ -734,7 +734,7 @@ export const buildOrders: BuildOrder[] = [
         ],
         counters: ['Greedy Protoss', 'Fast third Nexus'],
         weaknesses: ['Immortal defense', 'Disruptors'],
-        patch: '5.0.11'
+        patch: '5.0.14'
     },
     {
         id: 'muta-ling-bane-zvt',
@@ -773,7 +773,558 @@ export const buildOrders: BuildOrder[] = [
         transitions: 'Continue Muta production, add Banelings for defense',
         counters: ['Mech play', 'Greedy Terran'],
         weaknesses: ['Marine/Widow Mine', 'Thors'],
-        patch: '5.0.11'
+        patch: '5.0.14'
+    },
+
+    // ============================================================================
+    // NEW TERRAN BUILD ORDERS (2024 Meta)
+    // ============================================================================
+    {
+        id: 'hellion-reaper-tvz',
+        name: 'Hellion/Reaper Opener',
+        race: 'Terran',
+        vsRace: 'Zerg',
+        matchup: 'TvZ',
+        difficulty: 'Intermediate',
+        buildType: 'Economic',
+        playStyle: 'Aggressive early game harassment using Hellions and Reapers to disrupt Zerg economy while expanding. Transitions into bio or mech based on game state.',
+        goals: [
+            'Harass with Hellions and Reapers',
+            'Deny Zerg drone production',
+            'Scout Zerg tech choices',
+            'Maintain map control'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 16, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command', timing: '@100% Barracks' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 20, action: 'Command Center (Natural)' },
+            { supply: 21, action: 'Factory' },
+            { supply: 22, action: 'Refinery' },
+            { supply: 24, action: 'Reactor on Barracks' },
+            { supply: 26, action: 'Hellion x2', timing: '@100% Factory' },
+            { supply: 28, action: 'Hellion x2' },
+            { supply: 30, action: 'Starport' },
+            { supply: 32, action: 'Harass with Hellions', notes: 'Target drones and deny third base' },
+            { supply: 36, action: 'Medivac', timing: '@100% Starport' },
+            { supply: 40, action: 'Barracks x2' }
+        ],
+        transitions: 'Transition to bio with Stim and upgrades, or continue mech with more Factories',
+        counters: ['Greedy Zerg', 'Fast third hatchery'],
+        weaknesses: ['Queen defense', 'Spine Crawlers'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'proxy-2rax-tvp',
+        name: 'Proxy 2 Barracks',
+        race: 'Terran',
+        vsRace: 'Protoss',
+        matchup: 'TvP',
+        difficulty: 'Advanced',
+        buildType: 'All-In',
+        playStyle: 'Aggressive proxy 2 Barracks all-in that builds Barracks near opponent base for early Marine pressure. Aims to end game quickly.',
+        goals: [
+            'Build proxy Barracks undetected',
+            'Mass Marines quickly',
+            'Overwhelm before Stalkers',
+            'Win before tech units'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 15, action: 'Barracks (Proxy)', notes: 'Build near opponent base' },
+            { supply: 16, action: 'Barracks (Proxy)' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 20, action: 'Marine Production', notes: 'Constant Marines from both Barracks' },
+            { supply: 24, action: 'Supply Depot' },
+            { supply: 26, action: 'Tech Lab on one Barracks' },
+            { supply: 28, action: 'Combat Shield' },
+            { supply: 32, action: 'Attack!', notes: 'Push with all Marines' }
+        ],
+        counters: ['Greedy Protoss', 'Nexus first'],
+        weaknesses: ['Early scout', 'Stalker defense'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'bc-rush-tvt',
+        name: 'Battlecruiser Rush',
+        race: 'Terran',
+        vsRace: 'Terran',
+        matchup: 'TvT',
+        difficulty: 'Advanced',
+        buildType: 'Timing Attack',
+        playStyle: 'Fast tech to Battlecruisers with minimal defense. Aims to get first BC before opponent can respond with Vikings or Cyclones.',
+        goals: [
+            'Fast Fusion Core',
+            'Get first Battlecruiser quickly',
+            'Yamato Cannon key targets',
+            'Deny opponent economy'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 16, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 20, action: 'Factory' },
+            { supply: 22, action: 'Refinery' },
+            { supply: 24, action: 'Starport', timing: '@100% Factory' },
+            { supply: 26, action: 'Siege Tank' },
+            { supply: 28, action: 'Fusion Core', timing: '@100% Starport' },
+            { supply: 30, action: 'Command Center (Natural)' },
+            { supply: 36, action: 'Battlecruiser', timing: '@100% Fusion Core' },
+            { supply: 40, action: 'Attack with BC', notes: 'Yamato Cannon Tanks and key units' }
+        ],
+        transitions: 'Add more Starports for BC production or transition to standard play',
+        counters: ['Greedy mech', 'Slow Viking production'],
+        weaknesses: ['Early Viking rush', 'Cyclone pressure'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'cyclone-liberator-tvp',
+        name: 'Cyclone/Liberator Timing',
+        race: 'Terran',
+        vsRace: 'Protoss',
+        matchup: 'TvP',
+        difficulty: 'Intermediate',
+        buildType: 'Timing Attack',
+        playStyle: 'Mobile harassment with Cyclones and Liberators. Uses Liberator zones to control space while Cyclones kite and deal damage.',
+        goals: [
+            'Get Cyclones and Liberators',
+            'Control space with Liberator zones',
+            'Kite with Cyclones',
+            'Deny Protoss third base'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 16, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 20, action: 'Command Center (Natural)' },
+            { supply: 21, action: 'Factory' },
+            { supply: 22, action: 'Refinery' },
+            { supply: 24, action: 'Starport' },
+            { supply: 26, action: 'Cyclone', timing: '@100% Factory' },
+            { supply: 28, action: 'Liberator', timing: '@100% Starport' },
+            { supply: 30, action: 'Cyclone x2' },
+            { supply: 36, action: 'Liberator x2' },
+            { supply: 40, action: 'Push with Cyclone/Liberator', notes: 'Use Liberator zones for defense' }
+        ],
+        transitions: 'Add more Factories and Starports, or transition to bio',
+        counters: ['Greedy Protoss', 'Robo-heavy builds'],
+        weaknesses: ['Blink Stalkers', 'Phoenix'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'banshee-rush-tvz',
+        name: 'Banshee Rush',
+        race: 'Terran',
+        vsRace: 'Zerg',
+        matchup: 'TvZ',
+        difficulty: 'Intermediate',
+        buildType: 'Timing Attack',
+        playStyle: 'Fast cloaked Banshees to harass Zerg mineral lines. Aims to kill drones and delay Zerg economy while expanding.',
+        goals: [
+            'Get cloaked Banshees quickly',
+            'Kill drones in mineral lines',
+            'Delay Zerg tech',
+            'Expand behind harassment'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 16, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 20, action: 'Factory' },
+            { supply: 22, action: 'Refinery' },
+            { supply: 24, action: 'Starport', timing: '@100% Factory' },
+            { supply: 26, action: 'Siege Tank' },
+            { supply: 28, action: 'Banshee', timing: '@100% Starport' },
+            { supply: 28, action: 'Cloak', timing: 'Immediately' },
+            { supply: 30, action: 'Command Center (Natural)' },
+            { supply: 32, action: 'Banshee x2' },
+            { supply: 36, action: 'Harass with Banshees', notes: 'Target drones, avoid Queens' }
+        ],
+        transitions: 'Transition to bio or continue mech production',
+        counters: ['Greedy Zerg', 'Delayed Spores'],
+        weaknesses: ['Early Spore Crawlers', 'Queen defense'],
+        patch: '5.0.14'
+    },
+
+    // ============================================================================
+    // NEW PROTOSS BUILD ORDERS (2024 Meta)
+    // ============================================================================
+    {
+        id: '2gate-phoenix-pvt',
+        name: '2-Gate Phoenix Opener',
+        race: 'Protoss',
+        vsRace: 'Terran',
+        matchup: 'PvT',
+        difficulty: 'Intermediate',
+        buildType: 'Economic',
+        playStyle: 'Safe Stargate opener with Phoenix for map control and defense against drops. Strong against Terran air and harassment.',
+        goals: [
+            'Get Phoenix for map control',
+            'Defend against drops',
+            'Scout Terran composition',
+            'Transition to ground army'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Nexus (Natural)' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 22, action: 'Stalker' },
+            { supply: 23, action: 'Warpgate Research' },
+            { supply: 24, action: 'Assimilator' },
+            { supply: 26, action: 'Stargate' },
+            { supply: 27, action: 'Gateway' },
+            { supply: 30, action: 'Phoenix', timing: '@100% Stargate' },
+            { supply: 32, action: 'Phoenix x2' },
+            { supply: 36, action: 'Robotics Facility' },
+            { supply: 40, action: 'Gateway x2 (Total 4)' }
+        ],
+        transitions: 'Add Colossus or Disruptors from Robotics, continue Phoenix production',
+        counters: ['Widow Mine drops', 'Banshee rush'],
+        weaknesses: ['Marine/Marauder timing', 'Liberators'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'oracle-blink-pvz',
+        name: 'Oracle into Blink (MaxPax)',
+        race: 'Protoss',
+        vsRace: 'Zerg',
+        matchup: 'PvZ',
+        difficulty: 'Advanced',
+        buildType: 'Economic',
+        playStyle: 'Stargate opener with Oracle harassment followed by Blink Stalkers for mobility. Uses Oracle energy recharge for sustained harassment.',
+        goals: [
+            'Harass with Oracle',
+            'Get Blink for mobility',
+            'Use Energy Recharge effectively',
+            'Maintain map control'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Nexus (Natural)' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 22, action: 'Adept' },
+            { supply: 23, action: 'Warpgate Research' },
+            { supply: 24, action: 'Assimilator' },
+            { supply: 26, action: 'Stargate' },
+            { supply: 27, action: 'Gateway x2' },
+            { supply: 30, action: 'Oracle', timing: '@100% Stargate' },
+            { supply: 32, action: 'Twilight Council' },
+            { supply: 34, action: 'Oracle', notes: 'Use Energy Recharge from Nexus' },
+            { supply: 36, action: 'Blink', timing: '@100% Twilight' },
+            { supply: 40, action: 'Warp in Stalkers' }
+        ],
+        transitions: 'Add Robotics for Immortals or more Stargates for air control',
+        counters: ['Roach timings', 'Greedy Zerg'],
+        weaknesses: ['Spore Crawlers', 'Queen defense'],
+        author: 'MaxPax',
+        patch: '5.0.14'
+    },
+    {
+        id: 'dt-rush-pvt',
+        name: 'Dark Templar Rush',
+        race: 'Protoss',
+        vsRace: 'Terran',
+        matchup: 'PvT',
+        difficulty: 'Beginner',
+        buildType: 'Timing Attack',
+        playStyle: 'Fast Dark Shrine for cloaked Dark Templar rush. Aims to catch Terran without detection and deal massive damage.',
+        goals: [
+            'Get Dark Shrine quickly',
+            'Build Dark Templars',
+            'Attack before detection',
+            'Kill SCVs and key buildings'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 21, action: 'Nexus (Natural)' },
+            { supply: 22, action: 'Stalker' },
+            { supply: 23, action: 'Warpgate Research' },
+            { supply: 24, action: 'Assimilator' },
+            { supply: 26, action: 'Dark Shrine' },
+            { supply: 27, action: 'Gateway x2' },
+            { supply: 30, action: 'Dark Templar', timing: '@100% Dark Shrine' },
+            { supply: 32, action: 'Dark Templar x2' },
+            { supply: 36, action: 'Attack with DTs', notes: 'Target SCVs and production' }
+        ],
+        transitions: 'Merge Archons or add Robotics for Immortals',
+        counters: ['Greedy Terran', 'No early detection'],
+        weaknesses: ['Scan', 'Missile Turrets'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'void-ray-allin-pvp',
+        name: 'Void Ray All-In',
+        race: 'Protoss',
+        vsRace: 'Protoss',
+        matchup: 'PvP',
+        difficulty: 'Intermediate',
+        buildType: 'All-In',
+        playStyle: 'Fast Void Ray production with battery support. Aims to overwhelm opponent with charged Void Rays before they can respond.',
+        goals: [
+            'Mass Void Rays quickly',
+            'Use Batteries for defense',
+            'Charge up Void Rays',
+            'Break opponent defense'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 21, action: 'Pylon' },
+            { supply: 22, action: 'Stalker' },
+            { supply: 23, action: 'Warpgate Research' },
+            { supply: 24, action: 'Assimilator' },
+            { supply: 26, action: 'Stargate' },
+            { supply: 28, action: 'Shield Battery x2' },
+            { supply: 30, action: 'Void Ray', timing: '@100% Stargate' },
+            { supply: 32, action: 'Stargate x2 (Total 3)' },
+            { supply: 36, action: 'Void Ray production', notes: 'Continuous from all Stargates' },
+            { supply: 50, action: 'Attack!', notes: 'Push with 6-8 Void Rays' }
+        ],
+        counters: ['Greedy tech', 'Robo-heavy builds'],
+        weaknesses: ['Stalker defense', 'Blink Stalkers'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'colossus-timing-pvt',
+        name: 'Colossus Timing Attack',
+        race: 'Protoss',
+        vsRace: 'Terran',
+        matchup: 'PvT',
+        difficulty: 'Intermediate',
+        buildType: 'Timing Attack',
+        playStyle: 'Strong mid-game timing with Colossus and gateway units. Hits before Terran can mass Vikings.',
+        goals: [
+            'Get Robotics Bay quickly',
+            'Build 2-3 Colossus',
+            'Attack with gateway support',
+            'Win before Viking mass'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Nexus (Natural)' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 22, action: 'Stalker' },
+            { supply: 23, action: 'Warpgate Research' },
+            { supply: 24, action: 'Assimilator' },
+            { supply: 26, action: 'Robotics Facility' },
+            { supply: 27, action: 'Gateway x2' },
+            { supply: 30, action: 'Immortal', timing: '@100% Robotics' },
+            { supply: 32, action: 'Robotics Bay' },
+            { supply: 36, action: 'Colossus', timing: '@100% Robotics Bay' },
+            { supply: 40, action: 'Gateway x2 (Total 5)' },
+            { supply: 44, action: 'Colossus x2' },
+            { supply: 50, action: 'Attack!', notes: 'Push with 2-3 Colossus and gateway army' }
+        ],
+        transitions: 'Add more Robotics or transition to Templar tech',
+        counters: ['Bio timings', 'Greedy Terran'],
+        weaknesses: ['Viking production', 'Liberators'],
+        patch: '5.0.14'
+    },
+
+    // ============================================================================
+    // NEW ZERG BUILD ORDERS (2024 Meta)
+    // ============================================================================
+    {
+        id: 'nydus-allin-zvp',
+        name: 'Nydus All-In',
+        race: 'Zerg',
+        vsRace: 'Protoss',
+        matchup: 'ZvP',
+        difficulty: 'Advanced',
+        buildType: 'All-In',
+        playStyle: 'Aggressive Nydus Worm attack with Roaches or Zerglings. Aims to bypass Protoss defenses and attack from multiple angles.',
+        goals: [
+            'Get Nydus Network quickly',
+            'Load units into Nydus',
+            'Attack main base',
+            'Overwhelm with multi-pronged attack'
+        ],
+        steps: [
+            { supply: 12, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 19, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 22, action: 'Overlord' },
+            { supply: 26, action: 'Roach Warren' },
+            { supply: 28, action: 'Extractor x2 (Total 3)' },
+            { supply: 30, action: 'Lair' },
+            { supply: 32, action: 'Roaches', notes: 'Build 12-16 Roaches' },
+            { supply: 40, action: 'Nydus Network', timing: '@100% Lair' },
+            { supply: 44, action: 'Nydus Worm in opponent main', notes: 'Load Roaches and attack' }
+        ],
+        counters: ['Greedy Protoss', 'Weak defense'],
+        weaknesses: ['Early scout', 'Strong Stalker defense'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'lurker-rush-zvt',
+        name: 'Lurker Rush',
+        race: 'Zerg',
+        vsRace: 'Terran',
+        matchup: 'ZvT',
+        difficulty: 'Advanced',
+        buildType: 'Timing Attack',
+        playStyle: 'Fast Lurker tech for strong defensive positions. Uses Lurkers to control space and deny Terran pushes.',
+        goals: [
+            'Get Lurker Den quickly',
+            'Morph Lurkers',
+            'Control key positions',
+            'Deny Terran advances'
+        ],
+        steps: [
+            { supply: 12, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 19, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 22, action: 'Overlord' },
+            { supply: 26, action: 'Roach Warren' },
+            { supply: 28, action: 'Extractor x2 (Total 3)' },
+            { supply: 30, action: 'Lair' },
+            { supply: 32, action: 'Hydralisk Den', timing: '@100% Lair' },
+            { supply: 36, action: 'Lurker Den', timing: '@100% Hydralisk Den' },
+            { supply: 40, action: 'Hydralisks x8' },
+            { supply: 44, action: 'Morph Lurkers', notes: 'Morph 4-6 Lurkers' },
+            { supply: 50, action: 'Position Lurkers', notes: 'Control key areas' }
+        ],
+        transitions: 'Continue Lurker production, add Vipers for late game',
+        counters: ['Bio pushes', 'Tank positioning'],
+        weaknesses: ['Liberator zones', 'Raven detection'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'swarm-host-zvp',
+        name: 'Swarm Host Contain',
+        race: 'Zerg',
+        vsRace: 'Protoss',
+        matchup: 'ZvP',
+        difficulty: 'Advanced',
+        buildType: 'Economic',
+        playStyle: 'Defensive Swarm Host play to contain Protoss while building economy. Uses Locusts to deny expansions.',
+        goals: [
+            'Get Swarm Hosts',
+            'Contain Protoss',
+            'Deny third base',
+            'Build strong economy'
+        ],
+        steps: [
+            { supply: 12, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 19, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 22, action: 'Overlord' },
+            { supply: 26, action: 'Roach Warren' },
+            { supply: 30, action: 'Hatchery (Third)' },
+            { supply: 32, action: 'Extractor x2 (Total 3)' },
+            { supply: 36, action: 'Lair' },
+            { supply: 40, action: 'Infestation Pit', timing: '@100% Lair' },
+            { supply: 44, action: 'Swarm Host x4', timing: '@100% Infestation Pit' },
+            { supply: 50, action: 'Position Swarm Hosts', notes: 'Contain Protoss third' }
+        ],
+        transitions: 'Add Vipers and Lurkers for late game army',
+        counters: ['Greedy Protoss', 'Fast third Nexus'],
+        weaknesses: ['Blink Stalker harassment', 'Disruptors'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'broodlord-transition-zvt',
+        name: 'Brood Lord Transition',
+        race: 'Zerg',
+        vsRace: 'Terran',
+        matchup: 'ZvT',
+        difficulty: 'Advanced',
+        buildType: 'Economic',
+        playStyle: 'Late game transition to Brood Lords for siege power. Uses Brood Lords to break Terran defensive positions.',
+        goals: [
+            'Survive to late game',
+            'Get Greater Spire',
+            'Morph Brood Lords',
+            'Break Terran positions'
+        ],
+        steps: [
+            { supply: 12, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 19, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 20, action: 'Zergling Speed' },
+            { supply: 26, action: 'Queen x2 (Total 4)' },
+            { supply: 30, action: 'Hatchery (Third)' },
+            { supply: 36, action: 'Lair' },
+            { supply: 40, action: 'Spire', timing: '@100% Lair' },
+            { supply: 50, action: 'Corruptors x8', timing: '@100% Spire' },
+            { supply: 60, action: 'Greater Spire' },
+            { supply: 70, action: 'Morph Brood Lords', notes: 'Morph 4-6 Brood Lords' },
+            { supply: 80, action: 'Attack with Brood Lords', notes: 'Supported by ground army' }
+        ],
+        transitions: 'Add Vipers for Abduct and Blinding Cloud',
+        counters: ['Mech compositions', 'Tank lines'],
+        weaknesses: ['Vikings', 'Liberators'],
+        patch: '5.0.14'
+    },
+    {
+        id: 'hydra-ling-drop-zvp',
+        name: 'Hydra/Ling Drop (Reynor)',
+        race: 'Zerg',
+        vsRace: 'Protoss',
+        matchup: 'ZvP',
+        difficulty: 'Advanced',
+        buildType: 'Timing Attack',
+        playStyle: 'Aggressive drop play with Hydralisks and Zerglings using Overlord speed. Harasses multiple locations simultaneously.',
+        goals: [
+            'Get Overlord speed',
+            'Load Hydras and Lings',
+            'Drop in multiple locations',
+            'Deny Protoss economy'
+        ],
+        steps: [
+            { supply: 12, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 19, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 22, action: 'Overlord' },
+            { supply: 26, action: 'Queen x2 (Total 4)' },
+            { supply: 30, action: 'Hatchery (Third)' },
+            { supply: 32, action: 'Extractor x2 (Total 3)' },
+            { supply: 36, action: 'Lair' },
+            { supply: 40, action: 'Hydralisk Den', timing: '@100% Lair' },
+            { supply: 44, action: 'Pneumatized Carapace', notes: 'Overlord speed' },
+            { supply: 50, action: 'Hydralisks x8' },
+            { supply: 56, action: 'Load and drop', notes: 'Drop in mineral lines' }
+        ],
+        transitions: 'Continue Hydra production, add Lurkers',
+        counters: ['Greedy Protoss', 'Weak air defense'],
+        weaknesses: ['Phoenix', 'Strong Stalker defense'],
+        author: 'Reynor',
+        patch: '5.0.14'
     }
 ];
 

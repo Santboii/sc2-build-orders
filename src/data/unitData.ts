@@ -8,6 +8,7 @@ export interface UnitData {
     description: string;
     race: 'Terran' | 'Protoss' | 'Zerg' | 'Neutral';
     type: 'unit' | 'building' | 'upgrade';
+    upgrades?: string[]; // IDs of upgrades from upgradesData.ts
 }
 
 export const unitDatabase: Record<string, UnitData> = {
@@ -19,40 +20,60 @@ export const unitDatabase: Record<string, UnitData> = {
         imageUrl: '/images/units/SCV.jpg',
         description: 'The builder and resource gatherer of the terran race. Its Repair ability can be set to "autocast".',
         race: 'Terran',
-        type: 'unit'
+        type: 'unit',
+        upgrades: ['infantry-armor-1', 'infantry-armor-2', 'infantry-armor-3']
     },
     'Marine': {
         name: 'Marine',
         imageUrl: '/images/units/Marine.jpg',
         description: 'The basic terran infantry, able to upgrade hit points with a shield.',
         race: 'Terran',
-        type: 'unit'
+        type: 'unit',
+        upgrades: [
+            'stim-pack',
+            'combat-shield',
+            'infantry-weapons-1', 'infantry-weapons-2', 'infantry-weapons-3',
+            'infantry-armor-1', 'infantry-armor-2', 'infantry-armor-3'
+        ]
     },
     'Marauder': {
         name: 'Marauder',
         imageUrl: '/images/units/Marauder.jpg',
         description: 'The replacement for the firebat.[10] Its attack slows enemy units and deals high damage against armored units.',
         race: 'Terran',
-        type: 'unit'
+        type: 'unit',
+        upgrades: [
+            'stim-pack',
+            'infantry-weapons-1', 'infantry-weapons-2', 'infantry-weapons-3',
+            'infantry-armor-1', 'infantry-armor-2', 'infantry-armor-3'
+        ]
     },
     'Reaper': {
         name: 'Reaper',
         imageUrl: '/images/units/Reaper.jpg',
         description: 'Exceptionally fast infantry that uses dual pistols, can jet pack up and down ledges and uses explosives against buildings.',
         race: 'Terran',
-        type: 'unit'
+        type: 'unit',
+        upgrades: [
+            'infantry-weapons-1', 'infantry-weapons-2', 'infantry-weapons-3',
+            'infantry-armor-1', 'infantry-armor-2', 'infantry-armor-3'
+        ]
     },
     'Ghost': {
         name: 'Ghost',
         imageUrl: '/images/units/Ghost.jpg',
         description: 'Stealth specialist with access to several powerful and different abilities than in StarCraft I.',
         race: 'Terran',
-        type: 'unit'
+        type: 'unit',
+        upgrades: [
+            'infantry-weapons-1', 'infantry-weapons-2', 'infantry-weapons-3',
+            'infantry-armor-1', 'infantry-armor-2', 'infantry-armor-3'
+        ]
     },
     'Hellion': {
         name: 'Hellion',
         imageUrl: '/images/units/Hellion.jpg',
-        description: 'Formerly known as the jackal, this fast vehicle is armed with a flamethrower[8][9] suited for destroying masses of weaker units.',
+        description: 'A fast raider with a flamethrower that damages all enemy units in a line.',
         race: 'Terran',
         type: 'unit'
     },
@@ -66,70 +87,70 @@ export const unitDatabase: Record<string, UnitData> = {
     'Widow Mine': {
         name: 'Widow Mine',
         imageUrl: '/images/units/Widow_Mine.jpg',
-        description: 'Mobile defensive unit, buries and launches missiles at foes.',
+        description: 'A burrowing mine that fires a powerful missile at enemies.',
         race: 'Terran',
         type: 'unit'
     },
     'Siege Tank': {
         name: 'Siege Tank',
         imageUrl: '/images/units/Siege_Tank.jpg',
-        description: 'Terran tank that can transform into a stationary \'siege cannon\' mode, allowing it to strike targets at a greater range.',
+        description: 'A powerful tank that can switch between mobile Tank Mode and stationary Siege Mode for long-range artillery.',
         race: 'Terran',
         type: 'unit'
     },
     'Thor': {
         name: 'Thor',
         imageUrl: '/images/units/Thor.jpg',
-        description: 'This intimidating mechanical unit is named after the Norse god of thunder. Can deal splash damage to air units and fire powerful cannons at ground targets.',
+        description: 'A massive walker with powerful ground and air attacks.',
         race: 'Terran',
         type: 'unit'
     },
     'Cyclone': {
         name: 'Cyclone',
         imageUrl: '/images/units/Cyclone.jpg',
-        description: 'Mobile assault unit, armed with twin Typhoon missile pods that engage air and ground threats.',
+        description: 'A mobile missile battery that can lock onto targets and fire while moving.',
         race: 'Terran',
         type: 'unit'
     },
     'Viking': {
         name: 'Viking',
         imageUrl: '/images/units/Viking.jpg',
-        description: 'This terran vehicle can transform between a walking robot and a spacecraft.',
+        description: 'A versatile fighter that can transform between an air superiority fighter and a ground assault walker.',
         race: 'Terran',
         type: 'unit'
     },
     'Medivac': {
         name: 'Medivac',
         imageUrl: '/images/units/Medivac.jpg',
-        description: 'A dual-purpose unit combining the old dropship and the medic, it is capable of transporting ground units and healing infantry.',
+        description: 'A dropship that can heal biological units.',
         race: 'Terran',
         type: 'unit'
     },
     'Liberator': {
         name: 'Liberator',
         imageUrl: '/images/units/Liberator.jpg',
-        description: 'Transformable medium-sized gunship, armed with anti-ground cannons after transforming into a stationary air platform.',
+        description: 'An air unit with a powerful anti-ground zone control attack.',
         race: 'Terran',
         type: 'unit'
     },
     'Raven': {
         name: 'Raven',
         imageUrl: '/images/units/Raven.jpg',
-        description: 'Formerly known as the nighthawk, vulkan[11] and nomad, this air detector creates smaller independent munitions.[12]',
+        description: 'A support caster with detection and various utility abilities.',
         race: 'Terran',
         type: 'unit'
     },
     'Banshee': {
         name: 'Banshee',
         imageUrl: '/images/units/Banshee.jpg',
-        description: 'A cloak-capable gunship able to only attack ground-based targets.',
+        description: 'A tactical strike aircraft that can cloak.',
         race: 'Terran',
         type: 'unit'
     },
     'Battlecruiser': {
         name: 'Battlecruiser',
         imageUrl: '/images/units/Battlecruiser.jpg',
-        description: 'The capital ship of the terran fleet, this powerful spacecraft is capable of firing a Yamato Cannon that deals large damage to a single target.',
+        description: 'A massive capital ship with heavy armor and powerful weaponry.',
         race: 'Terran',
         type: 'unit'
     },
@@ -263,77 +284,77 @@ export const unitDatabase: Record<string, UnitData> = {
     'Probe': {
         name: 'Probe',
         imageUrl: '/images/units/Probe.jpg',
-        description: 'The builder of the protoss race. Gathers gas and minerals.',
+        description: 'The worker unit for the Protoss. It warps in buildings.',
         race: 'Protoss',
         type: 'unit'
     },
     'Zealot': {
         name: 'Zealot',
         imageUrl: '/images/units/Zealot.jpg',
-        description: 'Melee unit with the ability to charge, allowing it to quickly close the distance between itself and an enemy unit.',
+        description: 'The basic Protoss warrior. Durable and deals heavy damage.',
         race: 'Protoss',
         type: 'unit'
     },
     'Stalker': {
         name: 'Stalker',
         imageUrl: '/images/units/Stalker.jpg',
-        description: 'A dragoon-like Nerazim unit, able to blink (short-range teleport) and deliver ranged attacks against air and ground units.',
+        description: 'A mobile ranged unit that can blink short distances.',
         race: 'Protoss',
         type: 'unit'
     },
     'Sentry': {
         name: 'Sentry',
         imageUrl: '/images/units/Sentry.jpg',
-        description: 'Formerly known as the disruptor,[1] and the nullifier before that.[2] A ground support unit.',
+        description: 'A robotic support unit with force fields and guardian shield.',
         race: 'Protoss',
         type: 'unit'
     },
     'Adept': {
         name: 'Adept',
         imageUrl: '/images/units/Adept.jpg',
-        description: 'Ground-only ranged attack unit, armed with psionic transfer ability to teleport to nearby locations for harassment.',
+        description: 'A ranged unit that can project a psionic shade to teleport.',
         race: 'Protoss',
         type: 'unit'
     },
     'High Templar': {
         name: 'High Templar',
         imageUrl: '/images/units/High_Templar.jpg',
-        description: 'A physically fragile unit with strong psychic abilities.',
+        description: 'A powerful caster with Psionic Storm.',
         race: 'Protoss',
         type: 'unit'
     },
     'Dark Templar': {
         name: 'Dark Templar',
         imageUrl: '/images/units/Dark_Templar.jpg',
-        description: 'A permanently cloaked stealth warrior.',
+        description: 'A permanently cloaked assassin with high damage.',
         race: 'Protoss',
         type: 'unit'
     },
     'Archon': {
         name: 'Archon',
         imageUrl: '/images/units/Archon.jpg',
-        description: 'Created by merging two templar units, the archon is a powerful melee unit with a very durable force shield and a strong energy-based attack.',
+        description: 'A massive psionic entity formed by merging two Templars.',
         race: 'Protoss',
         type: 'unit'
     },
     'Observer': {
         name: 'Observer',
         imageUrl: '/images/units/Observer.jpg',
-        description: 'A cloaking air unit that functions as a detector.',
+        description: 'A permanently cloaked robotic scout and detector.',
         race: 'Protoss',
         type: 'unit'
     },
     'Warp Prism': {
         name: 'Warp Prism',
         imageUrl: '/images/units/Warp_Prism.jpg',
-        description: 'Formerly known as the phase prism,[4] the warp prism is a dual-purpose unit, able to transport units or to create a warp matrix field like the pylon.',
+        description: 'A transport unit that can deploy a power field for warping in units.',
         race: 'Protoss',
         type: 'unit'
     },
     'Immortal': {
         name: 'Immortal',
         imageUrl: '/images/units/Immortal.jpg',
-        description: 'Dragoon-like walker with a strong defense against powerful attacks, but vulnerable to weaker attacks.',
+        description: 'A heavy assault strider with a barrier that absorbs damage.',
         race: 'Protoss',
         type: 'unit'
     },
@@ -810,18 +831,44 @@ export const unitDatabase: Record<string, UnitData> = {
     }
 };
 
+import { upgrades } from './upgradesData';
+
 // Helper function to get unit data by name
 export function getUnitData(actionName: string): UnitData | undefined {
-    // Try exact match first
+    // 1. Try exact match in unitDatabase
     if (unitDatabase[actionName]) {
         return unitDatabase[actionName];
     }
 
-    // Try partial match (e.g., "Barracks x2" should match "Barracks")
+    // 2. Try exact match in upgradesData
+    const upgrade = upgrades.find(u => u.name === actionName || u.id === actionName);
+    if (upgrade) {
+        return {
+            name: upgrade.name,
+            imageUrl: upgrade.icon || '',
+            description: upgrade.description,
+            race: upgrade.race,
+            type: 'upgrade'
+        };
+    }
+
+    // 3. Try partial match in unitDatabase
     for (const [key, data] of Object.entries(unitDatabase)) {
         if (actionName.includes(key)) {
             return data;
         }
+    }
+
+    // 4. Try partial match in upgradesData
+    const partialUpgrade = upgrades.find(u => actionName.includes(u.name));
+    if (partialUpgrade) {
+        return {
+            name: partialUpgrade.name,
+            imageUrl: partialUpgrade.icon || '',
+            description: partialUpgrade.description,
+            race: partialUpgrade.race,
+            type: 'upgrade'
+        };
     }
 
     return undefined;

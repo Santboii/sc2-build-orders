@@ -37,6 +37,12 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
         return 'radial-gradient(ellipse at bottom, #2a1a3f 0%, #090a0f 100%)';
     };
 
+    const getWhiteToRaceGradient = () => {
+        if (race === 'Terran') return 'linear-gradient(135deg, white, var(--terran-primary))';
+        if (race === 'Protoss') return 'linear-gradient(135deg, white, var(--protoss-primary))';
+        return 'linear-gradient(135deg, white, var(--zerg-primary))';
+    };
+
     return (
         <>
             {/* Themed Background */}
@@ -73,17 +79,20 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                 padding: 'var(--spacing-2xl) var(--spacing-lg)',
                 minHeight: 'calc(100vh - 200px)'
             }}>
-                {/* Breadcrumbs */}
-                <nav style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 'var(--spacing-sm)',
-                    marginBottom: 'var(--spacing-xl)',
-                    fontSize: '0.9375rem',
-                    color: 'var(--text-secondary)'
+                {/* Race Icon */}
+                <div style={{
+                    marginBottom: 'var(--spacing-xl)'
                 }}>
-                    <span style={{ color: getRaceColor(), fontWeight: 600 }}>{race}</span>
-                </nav>
+                    <img
+                        src={`/images/logos/${race.toLowerCase()}_logo.png`}
+                        alt={race}
+                        style={{
+                            width: '48px',
+                            height: '48px',
+                            filter: 'brightness(0) invert(1)'
+                        }}
+                    />
+                </div>
 
                 {/* Header */}
                 <div style={{
@@ -93,7 +102,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                         fontSize: '3rem',
                         fontWeight: 800,
                         marginBottom: 'var(--spacing-md)',
-                        background: getRaceGradient(),
+                        background: getWhiteToRaceGradient(),
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
@@ -191,7 +200,10 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                     <h3 style={{
                                         fontSize: '1.25rem',
                                         fontWeight: 700,
-                                        color: getRaceColor(),
+                                        background: getWhiteToRaceGradient(),
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                        backgroundClip: 'text',
                                         flex: 1
                                     }}>
                                         {build.name}

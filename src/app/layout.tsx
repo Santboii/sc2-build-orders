@@ -36,7 +36,6 @@ export default function RootLayout({
               fontSize: '1.25rem',
               fontWeight: 700
             }}>
-              <Home size={24} />
               <span className="text-gradient">SC2 Build Orders</span>
             </Link>
 
@@ -52,11 +51,6 @@ export default function RootLayout({
               }}>
                 Patch 5.0.11
               </span>
-              <Link href="/" className="text-secondary" style={{
-                transition: 'color var(--transition-fast)'
-              }}>
-                Home
-              </Link>
             </div>
           </div>
         </nav>

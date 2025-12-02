@@ -169,6 +169,12 @@ export default function BuildOrderPage({ params }: { params: Promise<{ race: str
         return 'radial-gradient(ellipse at bottom, #2a1a3f 0%, #090a0f 100%)';
     };
 
+    const getWhiteToRaceGradient = () => {
+        if (race === 'Terran') return 'linear-gradient(135deg, white, var(--terran-primary))';
+        if (race === 'Protoss') return 'linear-gradient(135deg, white, var(--protoss-primary))';
+        return 'linear-gradient(135deg, white, var(--zerg-primary))';
+    };
+
     const nextStep = () => {
         if (currentStep < build.steps.length - 1) {
             setCurrentStep(currentStep + 1);
@@ -249,10 +255,10 @@ export default function BuildOrderPage({ params }: { params: Promise<{ race: str
                     }}>
                         <div style={{ flex: 1, minWidth: '300px' }}>
                             <h1 style={{
-                                fontSize: '2.5rem',
+                                fontSize: '2rem',
                                 fontWeight: 800,
                                 marginBottom: 'var(--spacing-md)',
-                                background: getRaceGradient(),
+                                background: getWhiteToRaceGradient(),
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text'
@@ -316,6 +322,7 @@ export default function BuildOrderPage({ params }: { params: Promise<{ race: str
                             gap: 'var(--spacing-md)',
                             flexWrap: 'wrap'
                         }}>
+                            {/* Follow Along Mode - Temporarily Hidden
                             <button
                                 onClick={() => {
                                     if (!followAlongMode) {
@@ -326,8 +333,8 @@ export default function BuildOrderPage({ params }: { params: Promise<{ race: str
                                 }}
                                 className="btn-primary"
                                 style={{
-                                    fontSize: '1rem',
-                                    padding: 'var(--spacing-md) var(--spacing-xl)',
+                                    fontSize: '0.875rem',
+                                    padding: 'var(--spacing-sm) var(--spacing-lg)',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: 'var(--spacing-sm)',
@@ -338,16 +345,17 @@ export default function BuildOrderPage({ params }: { params: Promise<{ race: str
                                 <Clock size={20} />
                                 <span>{followAlongMode ? 'Exit Follow Along' : 'Start Follow Along'}</span>
                             </button>
+                            */}
 
                             <button
                                 onClick={() => {
                                     setStudyMode(!studyMode);
                                     if (followAlongMode) exitFollowAlong();
                                 }}
-                                className="btn-secondary"
+                                className="btn-primary"
                                 style={{
-                                    fontSize: '1rem',
-                                    padding: 'var(--spacing-md) var(--spacing-xl)',
+                                    fontSize: '0.875rem',
+                                    padding: 'var(--spacing-sm) var(--spacing-lg)',
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: 'var(--spacing-sm)',
