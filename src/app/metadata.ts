@@ -33,6 +33,11 @@ export const defaultMetadata: Metadata = {
     authors: [{ name: 'SC2 Build Order Trainer' }],
     creator: 'SC2 Build Order Trainer',
     publisher: 'SC2 Build Order Trainer',
+    icons: {
+        icon: '/images/logos/terran_logo.png',
+        shortcut: '/images/logos/terran_logo.png',
+        apple: '/images/logos/terran_logo.png',
+    },
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -42,7 +47,7 @@ export const defaultMetadata: Metadata = {
         description: siteDescription,
         images: [
             {
-                url: '/images/og-image.jpg',
+                url: '/images/races/terran.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'SC2 Build Order Trainer'
@@ -53,7 +58,7 @@ export const defaultMetadata: Metadata = {
         card: 'summary_large_image',
         title: `${siteName} - Master StarCraft 2 Strategies`,
         description: siteDescription,
-        images: ['/images/og-image.jpg'],
+        images: ['/images/races/terran.jpg'],
         creator: '@sc2builds'
     },
     robots: {
