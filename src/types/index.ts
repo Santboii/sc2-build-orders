@@ -1,5 +1,5 @@
 export type Race = 'Terran' | 'Protoss' | 'Zerg';
-export type Matchup = 'TvT' | 'TvP' | 'TvZ' | 'PvP' | 'PvT' | 'PvZ' | 'ZvZ' | 'ZvT' | 'ZvP';
+export type Matchup = 'TvT' | 'TvP' | 'TvZ' | 'TvX' | 'PvP' | 'PvT' | 'PvZ' | 'PvX' | 'ZvZ' | 'ZvT' | 'ZvP' | 'ZvX';
 export type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 export type BuildType = 'Economic' | 'Timing Attack' | 'All-In' | 'Cheese' | 'Defensive';
 

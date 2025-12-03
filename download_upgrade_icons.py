@@ -25,6 +25,9 @@ upgrades = {
     'infantry_armor_1': 'https://static.wikia.nocookie.net/starcraft/images/d/d7/SC2_TerrInfArm.gif/revision/latest',
     'infantry_armor_2': 'https://static.wikia.nocookie.net/starcraft/images/d/d7/SC2_TerrInfArm.gif/revision/latest',
     'infantry_armor_3': 'https://static.wikia.nocookie.net/starcraft/images/d/d7/SC2_TerrInfArm.gif/revision/latest',
+    'concussive_shells': 'https://liquipedia.net/commons/images/9/98/Concussive_Shells.png',
+    'charge': 'https://liquipedia.net/commons/images/d/db/Charge.png',
+    'blink': 'https://liquipedia.net/commons/images/1/16/Blink.png',
 }
 
 # Directory to save images

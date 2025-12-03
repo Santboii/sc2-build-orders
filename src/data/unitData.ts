@@ -775,56 +775,56 @@ export const unitDatabase: Record<string, UnitData> = {
     // ============================================================================
     'Stim Pack': {
         name: 'Stim Pack',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/6/6e/StimPack_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/stim_pack.jpg',
         description: 'Marine/Marauder ability. Increases attack and movement speed at the cost of HP.',
         race: 'Terran',
         type: 'upgrade'
     },
     'Combat Shield': {
         name: 'Combat Shield',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/f/f8/CombatShield_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/combat_shield.jpg',
         description: 'Increases Marine HP from 45 to 55.',
         race: 'Terran',
         type: 'upgrade'
     },
     'Concussive Shells': {
         name: 'Concussive Shells',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/5/59/ConcussiveShells_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/concussive_shells.png',
         description: 'Marauder attacks slow enemy movement speed.',
         race: 'Terran',
         type: 'upgrade'
     },
     'Charge': {
         name: 'Charge',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/1/19/Charge_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/charge.png',
         description: 'Zealots gain ability to charge at enemies for increased speed.',
         race: 'Protoss',
         type: 'upgrade'
     },
     'Blink': {
         name: 'Blink',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/c/c7/Blink_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/blink.png',
         description: 'Stalkers gain ability to teleport short distances.',
         race: 'Protoss',
         type: 'upgrade'
     },
     'Warpgate Research': {
         name: 'Warpgate Research',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/1/14/WarpGate_SC2_Icon1.jpg',
+        imageUrl: '/images/units/Warp_Gate.jpg',
         description: 'Allows Gateways to transform into Warp Gates for instant unit production.',
         race: 'Protoss',
         type: 'upgrade'
     },
     'Zergling Speed': {
         name: 'Zergling Speed',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/9/9b/MetabolicBoost_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/metabolic_boost.png',
         description: 'Metabolic Boost. Increases Zergling movement speed significantly.',
         race: 'Zerg',
         type: 'upgrade'
     },
     'Metabolic Boost': {
         name: 'Metabolic Boost',
-        imageUrl: 'https://static.wikia.nocookie.net/starcraft/images/9/9b/MetabolicBoost_SC2_Icon1.jpg',
+        imageUrl: '/images/upgrades/metabolic_boost.png',
         description: 'Increases Zergling movement speed significantly.',
         race: 'Zerg',
         type: 'upgrade'

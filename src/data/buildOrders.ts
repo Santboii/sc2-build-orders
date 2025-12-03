@@ -208,7 +208,7 @@ export const buildOrders: BuildOrder[] = [
             { supply: 17, action: 'Spawning Pool' },
             { supply: 19, action: 'Overlord' },
             { supply: 20, action: 'Queen x2', timing: '@100% Spawning Pool', notes: 'One for each hatchery' },
-            { supply: 20, action: 'Zergling Speed (Metabolic Boost)', timing: '@100% Spawning Pool' },
+            { supply: 20, action: 'Metabolic Boost', timing: '@100% Spawning Pool' },
             { supply: 22, action: 'Overlord' },
             { supply: 26, action: 'Queen x2 (Total 4)' },
             { supply: 30, action: 'Hatchery (Third)' },
@@ -1325,6 +1325,267 @@ export const buildOrders: BuildOrder[] = [
         weaknesses: ['Phoenix', 'Strong Stalker defense'],
         author: 'Reynor',
         patch: '5.0.14'
+    },
+
+    // ============================================================================
+    // NEWLY ADDED BUILDS (TvX, PvX, ZvX)
+    // ============================================================================
+    {
+        id: 'tvt-double-gas-mech',
+        name: 'Drift Double Gas Mech (TvT)',
+        race: 'Terran',
+        vsRace: 'Terran',
+        matchup: 'TvT',
+        difficulty: 'Intermediate',
+        buildType: 'Economic',
+        playStyle: 'Double gas opener into Mech. Focuses on getting Cyclones and Ravens early for defense and map control, transitioning into a strong Mech composition.',
+        goals: [
+            'Secure early double gas',
+            'Get Cyclones for early defense',
+            'Build Raven for detection and interference',
+            'Transition to Thors/Tanks'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 15, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 20, action: 'Factory' },
+            { supply: 23, action: 'Command Center (Natural)' },
+            { supply: 24, action: 'Hellion' },
+            { supply: 26, action: 'Tech Lab (Barracks)' },
+            { supply: 29, action: 'Cyclone' },
+            { supply: 33, action: 'Tech Lab (Starport)' },
+            { supply: 34, action: 'Cyclone' },
+            { supply: 42, action: 'Raven' }
+        ],
+        transitions: 'Add more Factories, get Armory upgrades, expand to third',
+        counters: ['Bio play', 'Marine heavy openers'],
+        weaknesses: ['Early Marauder pressure', 'Doom drops'],
+        author: 'JimPanzee',
+        patch: '5.0.14'
+    },
+    {
+        id: 'zvz-pig-roach-wall',
+        name: "PiG's 2-Base Roach Wall-Off (ZvZ)",
+        race: 'Zerg',
+        vsRace: 'Zerg',
+        matchup: 'ZvZ',
+        difficulty: 'Beginner',
+        buildType: 'Defensive',
+        playStyle: 'Safe ZvZ build that walls off the natural to deny Ling floods. Focuses on a 2-base Roach timing or safe macro transition.',
+        goals: [
+            'Wall off natural with Evo/Roach Warren',
+            'Deny Zergling run-bys',
+            'Build Roach army safely',
+            'Secure third base with Roach cover'
+        ],
+        steps: [
+            { supply: 13, action: 'Overlord', notes: 'Scout for 12 pool' },
+            { supply: 17, action: 'Hatchery (Natural)' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 20, action: 'Zergling x2' },
+            { supply: 27, action: 'Queen (Third)' },
+            { supply: 34, action: 'Spine Crawler', notes: 'At natural wall' },
+            { supply: 36, action: 'Extractor x2' },
+            { supply: 42, action: 'Roach Warren', notes: 'Part of wall' },
+            { supply: 42, action: 'Evolution Chamber x2', notes: 'Complete the wall' },
+            { supply: 48, action: 'Lair' },
+            { supply: 50, action: 'Missile Attacks +1' },
+            { supply: 70, action: 'Glial Reconstitution', timing: '@100% Lair' },
+            { supply: 105, action: 'Attack', notes: 'Move out with maxed Roach army' }
+        ],
+        transitions: 'Take third base, add Hydras, get +2 upgrades',
+        counters: ['Zergling floods', 'Baneling all-ins'],
+        weaknesses: ['Mutalisk switch', 'Lurkers'],
+        author: 'PiG',
+        patch: '5.0.14'
+    },
+    {
+        id: 'tvp-3rax-trademarc',
+        name: 'TradeMarc 3 Rax Pressure (TvP)',
+        race: 'Terran',
+        vsRace: 'Protoss',
+        matchup: 'TvP',
+        difficulty: 'Intermediate',
+        buildType: 'Timing Attack',
+        playStyle: 'Aggressive 3 Barracks opener with Reapers and Marines. Aims to pressure the Protoss early while setting up for a strong bio mid-game.',
+        goals: [
+            'Pressure with Reapers',
+            'Get 3 Barracks quickly',
+            'Stim timing attack',
+            'Punish greedy Protoss'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 15, action: 'Barracks' },
+            { supply: 15, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 20, action: 'Marine x2' },
+            { supply: 23, action: 'Barracks x2' },
+            { supply: 23, action: 'Reaper x2' },
+            { supply: 30, action: 'Orbital Command (Natural)' },
+            { supply: 31, action: 'Tech Lab (Barracks)' },
+            { supply: 30, action: 'Stim Pack' },
+            { supply: 36, action: 'Marine (Continuous)' }
+        ],
+        transitions: 'Add Factory/Starport, get Medivacs, expand to third',
+        counters: ['Fast Nexus', 'Stargate openings'],
+        weaknesses: ['Colossus', 'Early Adept pressure'],
+        author: 'Kinpach',
+        patch: '5.0.14'
+    },
+    {
+        id: 'pvt-maxpax-blink-colossus',
+        name: 'MaxPax Blink into Colossus (PvT)',
+        race: 'Protoss',
+        vsRace: 'Terran',
+        matchup: 'PvT',
+        difficulty: 'Advanced',
+        buildType: 'Economic',
+        playStyle: 'Standard macro build focusing on fast Blink for safety and map control, transitioning into Colossus for splash damage against Bio.',
+        goals: [
+            'Safe expansion',
+            'Fast Blink for defense/harass',
+            'Quick Colossus tech',
+            'Secure third base'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 16, action: 'Assimilator' },
+            { supply: 20, action: 'Cybernetics Core' },
+            { supply: 20, action: 'Nexus (Natural)' },
+            { supply: 21, action: 'Pylon' },
+            { supply: 22, action: 'Assimilator' },
+            { supply: 23, action: 'Adept' },
+            { supply: 29, action: 'Twilight Council' },
+            { supply: 36, action: 'Blink' },
+            { supply: 40, action: 'Robotics Facility' },
+            { supply: 53, action: 'Observer' },
+            { supply: 54, action: 'Nexus (Third)' }
+        ],
+        transitions: 'Add Robotics Bay, Thermal Lance, more Gateways',
+        counters: ['Bio pushes', 'Mine drops'],
+        weaknesses: ['Doom drops', 'Fast Vikings'],
+        author: 'MaxPax',
+        patch: '5.0.14'
+    },
+    {
+        id: 'tvx-reaper-fe',
+        name: 'Reaper FE 1-1-1 (TvX)',
+        race: 'Terran',
+        vsRace: 'Terran', // Using Terran as placeholder, but matchup is TvX
+        matchup: 'TvX',
+        difficulty: 'Beginner',
+        buildType: 'Economic',
+        playStyle: 'Standard Reaper Fast Expand opener that works in all matchups. Sets up a strong economy and transitions into a 1-1-1 setup for flexibility.',
+        goals: [
+            'Fast expansion',
+            'Reaper for scouting',
+            'Flexible 1-1-1 transition',
+            'Safe against most openers'
+        ],
+        steps: [
+            { supply: 14, action: 'Supply Depot' },
+            { supply: 15, action: 'Barracks' },
+            { supply: 16, action: 'Refinery' },
+            { supply: 19, action: 'Orbital Command' },
+            { supply: 19, action: 'Reaper' },
+            { supply: 20, action: 'Command Center (Natural)' },
+            { supply: 20, action: 'Refinery' },
+            { supply: 21, action: 'Reactor on Barracks' },
+            { supply: 21, action: 'Supply Depot' },
+            { supply: 22, action: 'Factory' },
+            { supply: 24, action: 'Marine x2' },
+            { supply: 27, action: 'Orbital Command (Natural)' },
+            { supply: 30, action: 'Starport' },
+            { supply: 30, action: 'Tech Lab (Factory)' }
+        ],
+        transitions: 'Bio, Mech, or Air based on scouting',
+        counters: ['Standard play'],
+        weaknesses: ['Cheese', 'All-ins if unscouted'],
+        author: 'dcblessi',
+        patch: '5.0.14'
+    },
+    {
+        id: 'pvx-pig-b2gm',
+        name: 'PiG B2GM Opener (PvX)',
+        race: 'Protoss',
+        vsRace: 'Protoss', // Placeholder
+        matchup: 'PvX',
+        difficulty: 'Beginner',
+        buildType: 'Economic',
+        playStyle: 'Safe and reliable opener from PiG\'s Bronze to GM series. Works against any race and focuses on solid macro fundamentals.',
+        goals: [
+            'Safe expansion',
+            'Constant probe production',
+            'Early Robo for observation',
+            'Transition to Colossus'
+        ],
+        steps: [
+            { supply: 14, action: 'Pylon' },
+            { supply: 16, action: 'Gateway' },
+            { supply: 17, action: 'Assimilator' },
+            { supply: 20, action: 'Nexus (Natural)' },
+            { supply: 21, action: 'Cybernetics Core' },
+            { supply: 21, action: 'Assimilator' },
+            { supply: 22, action: 'Pylon' },
+            { supply: 25, action: 'Adept' },
+            { supply: 26, action: 'Warpgate Research' },
+            { supply: 26, action: 'Robotics Facility' },
+            { supply: 29, action: 'Stalker' },
+            { supply: 36, action: 'Stalker' },
+            { supply: 39, action: 'Observer' },
+            { supply: 43, action: 'Assimilator x2' },
+            { supply: 49, action: 'Nexus (Third)' },
+            { supply: 54, action: 'Robotics Bay' },
+            { supply: 66, action: 'Colossus x2' }
+        ],
+        transitions: 'Add Gateways, get upgrades, max out on Stalker/Colossus',
+        counters: ['Passive play'],
+        weaknesses: ['Fast air switch', 'Heavy aggression'],
+        author: 'Ziex',
+        patch: '5.0.14'
+    },
+    {
+        id: 'zvx-standard-hatch-first',
+        name: 'Standard Hatch First (ZvX)',
+        race: 'Zerg',
+        vsRace: 'Zerg', // Placeholder
+        matchup: 'ZvX',
+        difficulty: 'Beginner',
+        buildType: 'Economic',
+        playStyle: 'The gold standard Zerg opener. Hatchery first allows for maximum larva production and economy. Safe against almost everything if scouted properly.',
+        goals: [
+            'Maximum economy',
+            'Queen production',
+            'Zergling speed',
+            'Map control with Creep'
+        ],
+        steps: [
+            { supply: 13, action: 'Overlord' },
+            { supply: 16, action: 'Hatchery (Natural)' },
+            { supply: 18, action: 'Extractor' },
+            { supply: 17, action: 'Spawning Pool' },
+            { supply: 20, action: 'Overlord' },
+            { supply: 20, action: 'Queen x2' },
+            { supply: 20, action: 'Zergling Speed' },
+            { supply: 24, action: 'Zergling x4', notes: 'Defense/Scouting' },
+            { supply: 30, action: 'Hatchery (Third)' },
+            { supply: 32, action: 'Overlord' },
+            { supply: 36, action: 'Baneling Nest', notes: 'Safety measure' },
+            { supply: 40, action: 'Lair' },
+            { supply: 44, action: 'Evolution Chamber x2' }
+        ],
+        transitions: 'Roach/Hydra, Muta/Ling/Bane',
+        counters: ['Macro play'],
+        weaknesses: ['Cannon rush', '12 Pool (if not careful)'],
+        author: 'GWLLO',
+        patch: '5.0.14'
     }
 ];
 
@@ -1343,9 +1604,9 @@ export function getBuildOrderById(id: string): BuildOrder | undefined {
 
 export function getMatchupsForRace(race: Race): Matchup[] {
     const matchups: Matchup[] = [];
-    if (race === 'Terran') matchups.push('TvT', 'TvP', 'TvZ');
-    if (race === 'Protoss') matchups.push('PvP', 'PvT', 'PvZ');
-    if (race === 'Zerg') matchups.push('ZvZ', 'ZvT', 'ZvP');
+    if (race === 'Terran') matchups.push('TvT', 'TvP', 'TvZ', 'TvX');
+    if (race === 'Protoss') matchups.push('PvP', 'PvT', 'PvZ', 'PvX');
+    if (race === 'Zerg') matchups.push('ZvZ', 'ZvT', 'ZvP', 'ZvX');
     return matchups;
 }
 
