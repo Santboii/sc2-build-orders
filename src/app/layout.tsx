@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { Home } from "lucide-react";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "SC2 Build Order Trainer - Master StarCraft 2 Strategies",
@@ -72,6 +73,7 @@ export default function RootLayout({
             <p style={{ marginTop: 'var(--spacing-sm)' }}>StarCraft 2 © Blizzard Entertainment</p>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
