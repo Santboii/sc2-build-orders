@@ -55,7 +55,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                 zIndex: -1,
                 background: getRaceBackgroundGradient(),
                 overflow: 'hidden'
-            }}>
+            }} aria-hidden="true">
                 <div style={{
                     position: 'absolute',
                     width: '2px',
@@ -85,7 +85,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                 }}>
                     <img
                         src={`/images/logos/${race.toLowerCase()}_logo.png`}
-                        alt={race}
+                        alt={`${race} logo`}
                         style={{
                             width: '48px',
                             height: '48px',
@@ -101,7 +101,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                     <h1 style={{
                         fontSize: '3rem',
                         fontWeight: 800,
-                        marginBottom: 'var(--spacing-md)',
+                        marginBottom: 'var(--spacing-md))',
                         background: getWhiteToRaceGradient(),
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -119,12 +119,16 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                     </p>
 
                     {/* Matchup Filter */}
-                    <div style={{
-                        display: 'flex',
-                        gap: 'var(--spacing-sm)',
-                        flexWrap: 'wrap',
-                        alignItems: 'center'
-                    }}>
+                    <div
+                        role="group"
+                        aria-label="Filter build orders by matchup"
+                        style={{
+                            display: 'flex',
+                            gap: 'var(--spacing-sm)',
+                            flexWrap: 'wrap',
+                            alignItems: 'center'
+                        }}
+                    >
                         <div style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -133,13 +137,15 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                             fontSize: '0.9375rem',
                             fontWeight: 600
                         }}>
-                            <Filter size={18} />
+                            <Filter size={18} aria-hidden="true" />
                             Filter by matchup:
                         </div>
 
                         <button
                             onClick={() => setSelectedMatchup('all')}
                             className={selectedMatchup === 'all' ? 'btn-primary' : 'btn-secondary'}
+                            aria-pressed={selectedMatchup === 'all'}
+                            aria-label="Show all matchups"
                             style={{
                                 fontSize: '0.875rem',
                                 padding: 'var(--spacing-xs) var(--spacing-md)'
@@ -153,6 +159,8 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                 key={matchup}
                                 onClick={() => setSelectedMatchup(matchup)}
                                 className={selectedMatchup === matchup ? 'btn-primary' : 'btn-secondary'}
+                                aria-pressed={selectedMatchup === matchup}
+                                aria-label={`Filter by ${matchup} matchup`}
                                 style={{
                                     fontSize: '0.875rem',
                                     padding: 'var(--spacing-xs) var(--spacing-md)'
@@ -174,16 +182,22 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                         <p>No build orders found for this matchup.</p>
                     </div>
                 ) : (
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-                        gap: 'var(--spacing-lg)'
-                    }}>
+                    <div
+                        role="list"
+                        aria-label={`${race} build orders`}
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+                            gap: 'var(--spacing-lg)'
+                        }}
+                    >
                         {filteredBuilds.map(build => (
                             <Link
                                 key={build.id}
                                 href={`/${raceParam}/${build.id}`}
                                 className="card card-interactive"
+                                role="listitem"
+                                aria-label={`${build.name} - ${build.difficulty} ${build.buildType} for ${build.matchup}`}
                                 style={{
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -272,7 +286,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                     color: getRaceColor(),
                                     marginTop: 'var(--spacing-sm)'
                                 }}>
-                                    <Play size={16} />
+                                    <Play size={16} aria-hidden="true" />
                                     View Build Order
                                 </div>
                             </Link>

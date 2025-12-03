@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ============================================================================
    CSS VARIABLES - SC2 THEMED DESIGN SYSTEM
@@ -501,4 +501,80 @@ p {
     right: 20px;
     transform: none;
   }
+}
+/* ============================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================================================ */
+
+/* Skip to content link - visible on focus */
+.skip-to-content:focus {
+  position: fixed !important;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: 10000;
+  outline: 3px solid var(--terran-primary);
+  outline-offset: 2px;
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--terran-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove default focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure interactive elements have visible focus states */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--terran-primary);
+  outline-offset: 2px;
+}
+
+/* Improve link focus visibility */
+a:focus-visible {
+  background-color: rgba(14, 165, 233, 0.1);
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+/* Reduced motion support for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-subtle: #666;
+    --border-medium: #888;
+    --text-muted: #ccc;
+  }
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
