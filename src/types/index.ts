@@ -8,7 +8,8 @@ export interface BuildOrderStep {
   action: string;           // e.g., "Supply Depot", "Barracks"
   icon?: string;            // e.g., "🏭", "⚔️" - emoji/unicode symbol
   notes?: string;           // Optional tactical notes
-  timing?: string;          // e.g., "@100% Barracks", "@6:15"
+  timing?: string;          // Clock time e.g., "2:30"
+  trigger?: string;         // Condition-based timing e.g., "@100% Barracks"
 }
 
 export interface BuildOrder {
@@ -28,4 +29,6 @@ export interface BuildOrder {
   author?: string;          // Pro player or source
   patch?: string;           // Game version
   videoUrl?: string;        // YouTube guide
+  spawningToolUrl?: string; // Link to Spawning Tool build
+  saltEncoding?: string;    // SALT (Save and Load Tool) encoding string
 }

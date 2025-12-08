@@ -32,9 +32,9 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
     };
 
     const getRaceBackgroundGradient = () => {
-        if (race === 'Terran') return 'radial-gradient(ellipse at bottom, #1a2f3f 0%, #090a0f 100%)';
-        if (race === 'Protoss') return 'radial-gradient(ellipse at bottom, #3f2a1a 0%, #090a0f 100%)';
-        return 'radial-gradient(ellipse at bottom, #2a1a3f 0%, #090a0f 100%)';
+        if (race === 'Terran') return 'radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 70%), radial-gradient(ellipse at bottom, rgba(14, 165, 233, 0.2) 0%, #0a0a0f 100%)';
+        if (race === 'Protoss') return 'radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, transparent 70%), radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.2) 0%, #0a0a0f 100%)';
+        return 'radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 70%), radial-gradient(ellipse at bottom, rgba(168, 85, 247, 0.2) 0%, #0a0a0f 100%)';
     };
 
     const getWhiteToRaceGradient = () => {
@@ -218,7 +218,9 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
                                         backgroundClip: 'text',
-                                        flex: 1
+                                        flex: 1,
+                                        wordWrap: 'break-word',
+                                        hyphens: 'auto'
                                     }}>
                                         {build.name}
                                     </h3>

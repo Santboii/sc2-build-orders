@@ -170,6 +170,15 @@ p {
   background: linear-gradient(135deg, var(--zerg-primary), var(--zerg-secondary));
 }
 
+/* Table Row Hover Effect */
+.tr-hover {
+  transition: background-color var(--transition-fast);
+}
+
+.tr-hover:hover {
+  background-color: var(--bg-hover) !important;
+}
+
 /* ============================================================================
    GLASSMORPHISM EFFECTS
    ============================================================================ */
@@ -382,7 +391,7 @@ p {
 }
 
 /* ============================================================================
-   SCROLLBAR STYLING
+   SCROLLBAR STYLES
    ============================================================================ */
 ::-webkit-scrollbar {
   width: 10px;
@@ -502,6 +511,7 @@ p {
     transform: none;
   }
 }
+
 /* ============================================================================
    ACCESSIBILITY IMPROVEMENTS
    ============================================================================ */
@@ -547,6 +557,7 @@ a:focus-visible {
 
 /* Reduced motion support for users who prefer less animation */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

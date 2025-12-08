@@ -17,6 +17,9 @@ export default function UnitTooltip({
 }: UnitTooltipProps) {
     const [imageError, setImageError] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [showDescription, setShowDescription] = useState(false);
+
+    // Test getUnitData
     const unitData = getUnitData(action);
     const fallbackIcon = getIconForAction(action);
 
@@ -27,19 +30,18 @@ export default function UnitTooltip({
         large: '48px'
     };
 
-    const emojiSizeMap = {
-        small: '1rem',
-        medium: '1.25rem',
-        large: '3rem'
-    };
-
     // If no unit data, return null
     if (!unitData) {
         return null;
     }
 
     return (
-        <div className="unit-tooltip-container" style={{ display: 'inline-block', position: 'relative' }}>
+        <div
+            className="unit-tooltip-container"
+            style={{ display: 'inline-block', position: 'relative', cursor: 'help' }}
+            onMouseEnter={() => setShowDescription(true)}
+            onMouseLeave={() => setShowDescription(false)}
+        >
             <img
                 src={unitData.imageUrl}
                 alt={unitData.name}
@@ -59,40 +61,42 @@ export default function UnitTooltip({
                 }}
             />
 
-            {/* Show loading placeholder if image hasn't loaded yet */}
-            {!imageLoaded && !imageError && (
-                <div style={{
-                    width: sizeMap[size],
-                    height: sizeMap[size],
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    borderRadius: '4px'
-                }} />
-            )}
+            {/* Tooltip Popup */}
+            {showTooltip && (
+                <div
+                    style={{
+                        position: 'absolute',
+                        bottom: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        marginBottom: '10px',
+                        width: '250px',
+                        background: 'rgba(15, 23, 42, 0.95)',
+                        border: '1px solid var(--border-subtle)',
+                        borderRadius: '6px',
+                        padding: '12px',
+                        zIndex: 100,
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.5)',
+                        opacity: showDescription ? 1 : 0,
+                        visibility: showDescription ? 'visible' : 'hidden',
+                        transition: 'opacity 0.2s, visibility 0.2s',
+                        pointerEvents: 'none',
+                        textAlign: 'left'
+                    }}
+                >
+                    <div style={{ fontWeight: 'bold', color: 'white', marginBottom: '4px', fontSize: '0.9rem' }}>{unitData.name}</div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>{unitData.description}</div>
 
-            {showTooltip && imageLoaded && (
-                <div className="unit-tooltip-content">
-                    <div className="unit-tooltip-header">
-                        <img
-                            src={unitData.imageUrl}
-                            alt={unitData.name}
-                            style={{
-                                width: '48px',
-                                height: '48px',
-                                objectFit: 'contain',
-                                marginRight: '12px'
-                            }}
-                        />
-                        <div>
-                            <div className="unit-tooltip-name">{unitData.name}</div>
-                            <div className="unit-tooltip-type">
-                                {unitData.race} {unitData.type === 'unit' ? 'Unit' : unitData.type === 'building' ? 'Building' : 'Upgrade'}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="unit-tooltip-description">{unitData.description}</div>
+                    {/* Tiny arrow */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        borderWidth: '6px',
+                        borderStyle: 'solid',
+                        borderColor: 'rgba(15, 23, 42, 0.95) transparent transparent transparent'
+                    }} />
                 </div>
             )}
         </div>
