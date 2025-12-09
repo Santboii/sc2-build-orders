@@ -6,6 +6,19 @@ import { ArrowLeft, Filter, Play } from 'lucide-react';
 import { getBuildOrdersByRace, getMatchupsForRace } from '@/data/buildOrders';
 import { Race, Matchup } from '@/types';
 
+const formatBadgeText = (text: string): string => {
+    if (!text) return '';
+    // Check for matchups like TvP, PvZ, etc. (case insensitive)
+    const matchupRegex = /^([TPSZ])v([TPSZ])$/i;
+    const match = text.match(matchupRegex);
+    if (match) {
+        return `${match[1].toUpperCase()}v${match[2].toUpperCase()}`;
+    }
+
+    // Otherwise, Capitalize First Letter of each word
+    return text.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+};
+
 export default function RacePage({ params }: { params: Promise<{ race: string }> }) {
     const { race: raceParam } = use(params);
     const race = (raceParam.charAt(0).toUpperCase() + raceParam.slice(1)) as Race;
@@ -226,7 +239,7 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                     </h3>
 
                                     <span className={`badge badge-${build.difficulty.toLowerCase()}`}>
-                                        {build.difficulty}
+                                        {formatBadgeText(build.difficulty)}
                                     </span>
                                 </div>
 
@@ -243,14 +256,14 @@ export default function RacePage({ params }: { params: Promise<{ race: string }>
                                         borderRadius: 'var(--radius-sm)',
                                         fontWeight: 600
                                     }}>
-                                        {build.matchup}
+                                        {formatBadgeText(build.matchup)}
                                     </span>
                                     <span style={{
                                         padding: 'var(--spacing-xs) var(--spacing-sm)',
                                         background: 'var(--bg-tertiary)',
                                         borderRadius: 'var(--radius-sm)'
                                     }}>
-                                        {build.buildType}
+                                        {formatBadgeText(build.buildType)}
                                     </span>
                                 </div>
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
-import { Play, Pause, SkipBack, SkipForward, ExternalLink, Target, AlertTriangle, Clock, RotateCcw, Swords, ShieldAlert, Copy } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, ExternalLink, Target, AlertTriangle, Clock, RotateCcw, Swords, ShieldAlert, Copy, BookOpen, Eye, EyeOff } from 'lucide-react';
 import UnitTooltip from '@/components/UnitTooltip';
 import StarBackground from '@/components/StarBackground';
 
@@ -33,6 +33,19 @@ const consolidateSteps = (steps: any[]) => {
     return consolidated;
 };
 
+const formatBadgeText = (text: string): string => {
+    if (!text) return '';
+    // Check for matchups like TvP, PvZ, etc. (case insensitive)
+    const matchupRegex = /^([TPSZ])v([TPSZ])$/i;
+    const match = text.match(matchupRegex);
+    if (match) {
+        return `${match[1].toUpperCase()}v${match[2].toUpperCase()}`;
+    }
+
+    // Otherwise, Capitalize First Letter of each word
+    return text.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+};
+
 interface BuildDetailClientProps {
     build: any;
     raceParam: string;
@@ -42,6 +55,9 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
     const [studyMode, setStudyMode] = useState(false);
     const [followAlongMode, setFollowAlongMode] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const consolidatedSteps = useMemo(() => consolidateSteps(build.steps), [build.steps]);
 
     const [isFollowAlongActive, setIsFollowAlongActive] = useState(false);
     const [isFollowAlongPaused, setIsFollowAlongPaused] = useState(false);
@@ -54,15 +70,21 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
     useEffect(() => {
         if (!studyMode) return;
         const handleKeyPress = (e: KeyboardEvent) => {
-            if (e.key === 'ArrowRight' && currentStep < (build?.steps.length || 0) - 1) {
+            const maxSteps = consolidatedSteps.length;
+            if (e.code === 'Space') {
+                e.preventDefault();
+                setIsFlipped(prev => !prev);
+            } else if (e.key === 'ArrowRight' && currentStep < maxSteps - 1) {
                 setCurrentStep(prev => prev + 1);
+                setIsFlipped(false);
             } else if (e.key === 'ArrowLeft' && currentStep > 0) {
                 setCurrentStep(prev => prev - 1);
+                setIsFlipped(false);
             }
         };
         window.addEventListener('keydown', handleKeyPress);
         return () => window.removeEventListener('keydown', handleKeyPress);
-    }, [studyMode, currentStep, build]);
+    }, [studyMode, currentStep, consolidatedSteps]);
 
     useEffect(() => {
         if (!isFollowAlongActive || isFollowAlongPaused || !build) return;
@@ -87,10 +109,10 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
     }, [isFollowAlongActive, isFollowAlongPaused, currentStep, build]);
 
     useEffect(() => {
-        if (followAlongMode && followAlongSectionRef.current) {
-            followAlongSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if ((followAlongMode || studyMode) && followAlongSectionRef.current) {
+            followAlongSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-    }, [followAlongMode]);
+    }, [followAlongMode, studyMode]);
 
     const formatTime = (seconds: number): string => {
         const mins = Math.floor(seconds / 60);
@@ -201,9 +223,9 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                 <h1 style={{ marginBottom: '15px', fontSize: '2rem', fontWeight: 800, background: theme.textGradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{build.name}</h1>
 
                                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '15px' }}>
-                                    <span className={`badge badge-${build.difficulty.toLowerCase()}`}>{build.difficulty}</span>
-                                    <span className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>{build.matchup}</span>
-                                    <span className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>{build.buildType}</span>
+                                    <span className={`badge badge-${build.difficulty.toLowerCase()}`}>{formatBadgeText(build.difficulty)}</span>
+                                    <span className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>{formatBadgeText(build.matchup)}</span>
+                                    <span className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }}>{formatBadgeText(build.buildType)}</span>
                                 </div>
 
                                 {build.author && build.author !== 'Unknown' && (
@@ -234,24 +256,14 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                             {/* Action Buttons */}
                             <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', alignItems: 'flex-start' }}>
                                 <button
-                                    onClick={followAlongMode ? exitFollowAlong : startFollowAlong}
-                                    className="btn-primary"
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        gap: '8px',
-                                        background: theme.gradient,
-                                        boxShadow: `0 0 20px ${theme.glow}`,
-                                        padding: '12px 20px',
-                                        whiteSpace: 'nowrap',
-                                        cursor: 'pointer'
+                                    onClick={() => {
+                                        const newStudyMode = !studyMode;
+                                        setStudyMode(newStudyMode);
+                                        if (newStudyMode) {
+                                            setFollowAlongMode(false);
+                                            setCurrentStep(0);
+                                        }
                                     }}
-                                >
-                                    <Clock size={18} /> {followAlongMode ? 'Exit Follow Along' : 'Play Along'}
-                                </button>
-                                <button
-                                    onClick={() => setStudyMode(!studyMode)}
                                     className="btn-secondary"
                                     style={{
                                         display: 'flex',
@@ -263,7 +275,25 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    {studyMode ? <Pause size={18} /> : <Play size={18} />} {studyMode ? 'Exit Study Mode' : 'Enter Study Mode'}
+                                    {studyMode ? <Pause size={18} /> : <BookOpen size={18} />} {studyMode ? 'Exit Study Mode' : 'Study Mode'}
+                                </button>
+                                <button
+                                    onClick={followAlongMode ? exitFollowAlong : startFollowAlong}
+                                    className="btn-primary"
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '8px',
+                                        background: theme.gradient,
+                                        boxShadow: `0 0 20px ${theme.glow}`,
+                                        border: '1px solid transparent',
+                                        padding: '12px 20px',
+                                        whiteSpace: 'nowrap',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    <Play size={18} /> {followAlongMode ? 'Exit Follow Along' : 'Play Along'}
                                 </button>
                             </div>
                         </div>
@@ -443,6 +473,124 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                             )}
                         </div>
                     </div>
+                ) : studyMode ? (
+                    <div className="card" ref={followAlongSectionRef} style={{ padding: '60px', textAlign: 'center', minHeight: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+
+                        {/* Progress Bar */}
+                        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '6px', background: 'var(--bg-tertiary)' }}>
+                            <div style={{
+                                width: `${((currentStep + 1) / consolidatedSteps.length) * 100}%`,
+                                height: '100%',
+                                background: theme.primary,
+                                transition: 'width 0.3s ease'
+                            }} />
+                        </div>
+
+                        <div style={{ marginBottom: '40px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>
+                            Step {currentStep + 1} of {consolidatedSteps.length}
+                        </div>
+
+                        {/* Flashcard Content */}
+                        <div style={{ width: '100%', maxWidth: '600px', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+
+                            {/* Constant Front Info: Supply & Time */}
+                            <div style={{ display: 'flex', gap: '40px', marginBottom: '40px' }}>
+                                <div>
+                                    <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Supply</div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 800, color: theme.primary }}>{consolidatedSteps[currentStep].supply}</div>
+                                </div>
+                                <div style={{ width: '1px', background: 'var(--border-medium)' }}></div>
+                                <div>
+                                    <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Time</div>
+                                    <div style={{ fontSize: '2.5rem', fontFamily: 'monospace', fontWeight: 800, color: 'white' }}>{consolidatedSteps[currentStep].timing || '-'}</div>
+                                </div>
+                            </div>
+
+                            {/* Dynamic Answer Area */}
+                            <div style={{ minHeight: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                                {!isFlipped ? (
+                                    <div style={{ color: 'var(--text-muted)', fontSize: '1.5rem', fontStyle: 'italic', animation: 'fadeIn 0.3s ease' }}>
+                                        What do you build next?
+                                    </div>
+                                ) : (
+                                    <div style={{ animation: 'fadeIn 0.3s ease', textAlign: 'center' }}>
+                                        <div style={{ marginBottom: '20px' }}>
+                                            <UnitTooltip action={consolidatedSteps[currentStep].action} size="large" />
+                                        </div>
+                                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '16px', color: 'white' }}>
+                                            {consolidatedSteps[currentStep].action}
+                                            {consolidatedSteps[currentStep].count > 1 && <span style={{ color: theme.primary }}> x{consolidatedSteps[currentStep].count}</span>}
+                                        </h2>
+                                        {consolidatedSteps[currentStep].notes && (
+                                            <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '500px', lineHeight: 1.6 }}>
+                                                {consolidatedSteps[currentStep].notes}
+                                            </p>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Controls */}
+                        <div style={{ display: 'flex', gap: '20px', marginTop: '60px', alignItems: 'center' }}>
+                            <button
+                                onClick={() => currentStep > 0 && (setCurrentStep(s => s - 1), setIsFlipped(false))}
+                                className="btn-secondary"
+                                disabled={currentStep === 0}
+                                style={{
+                                    opacity: currentStep === 0 ? 0.5 : 1,
+                                    cursor: currentStep === 0 ? 'not-allowed' : 'pointer',
+                                    padding: '16px 24px',
+                                    height: '56px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    fontSize: '1rem'
+                                }}
+                            >
+                                <SkipBack size={18} /> Prev
+                            </button>
+
+                            <button
+                                onClick={() => setIsFlipped(!isFlipped)}
+                                className="btn-primary"
+                                style={{
+                                    background: theme.gradient,
+                                    boxShadow: `0 0 20px ${theme.glow}`,
+                                    padding: '0 40px',
+                                    height: '56px',
+                                    fontSize: '1.1rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px'
+                                }}
+                            >
+                                {isFlipped ? <EyeOff size={20} /> : <Eye size={20} />} {isFlipped ? 'Hide Answer' : 'Reveal Answer'}
+                            </button>
+
+                            <button
+                                onClick={() => currentStep < consolidatedSteps.length - 1 && (setCurrentStep(s => s + 1), setIsFlipped(false))}
+                                className="btn-secondary"
+                                disabled={currentStep === consolidatedSteps.length - 1}
+                                style={{
+                                    opacity: currentStep === consolidatedSteps.length - 1 ? 0.5 : 1,
+                                    cursor: currentStep === consolidatedSteps.length - 1 ? 'not-allowed' : 'pointer',
+                                    padding: '16px 24px',
+                                    height: '56px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    fontSize: '1rem'
+                                }}
+                            >
+                                Next <SkipForward size={18} />
+                            </button>
+                        </div>
+
+                        <div style={{ marginTop: '20px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                            Press <span style={{ border: '1px solid var(--border-medium)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>Space</span> to flip • <span style={{ border: '1px solid var(--border-medium)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>Arrows</span> to navigate
+                        </div>
+                    </div>
                 ) : (
                     <div className="card" style={{ padding: '0', overflow: 'hidden', border: '1px solid var(--border-subtle)' }}>
                         <div style={{ padding: '20px', borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-secondary)' }}>
@@ -460,10 +608,10 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {consolidateSteps(build.steps).map((step: any, idx: number) => (
+                                    {consolidatedSteps.map((step: any, idx: number) => (
                                         <tr key={idx}
                                             className="tr-hover"
-                                            style={{ borderBottom: '1px solid var(--border-subtle)', background: idx === currentStep && studyMode ? 'var(--bg-hover)' : 'transparent', transition: 'background-color 0.1s' }}
+                                            style={{ borderBottom: '1px solid var(--border-subtle)', background: 'transparent', transition: 'background-color 0.1s' }}
                                         >
                                             <td style={{ padding: '16px 24px', color: theme.primary, fontWeight: '800', fontSize: '1.1rem' }}>{step.supply}</td>
                                             <td style={{ padding: '16px 24px', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>{step.timing || '-'}</td>

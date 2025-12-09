@@ -261,8 +261,8 @@ p {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
   box-shadow: 0 0 30px var(--terran-glow);
+  filter: brightness(1.15);
 }
 
 .btn-secondary {
@@ -286,7 +286,6 @@ p {
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
