@@ -2,9 +2,11 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Play, Pause, SkipBack, SkipForward, ExternalLink, Target, AlertTriangle, Clock, RotateCcw, Swords, ShieldAlert, Copy, BookOpen, Eye, EyeOff } from 'lucide-react';
 import UnitTooltip from '@/components/UnitTooltip';
 import StarBackground from '@/components/StarBackground';
+import { unitCosts } from '@/data/unitCosts';
 
 const parseTimingToSeconds = (timing: string | undefined): number => {
     if (!timing) return 0;
@@ -44,6 +46,74 @@ const formatBadgeText = (text: string): string => {
 
     // Otherwise, Capitalize First Letter of each word
     return text.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+};
+
+const calculateStepCost = (action: string, count: number = 1) => {
+    let minerals = 0;
+    let gas = 0;
+
+    // Split by comma for multiple actions in one step (e.g. "Orbital Command,Reaper")
+    const parts = action.split(',');
+
+    parts.forEach(part => {
+        let cleanPart = part.trim();
+
+        // Remove text in parentheses (e.g. "(Chrono Boost)")
+        cleanPart = cleanPart.replace(/\s*\(.*?\)/g, '').trim();
+
+        let unitCount = 1;
+
+        // Check for " xN" suffix
+        const multiplierMatch = cleanPart.match(/^(.*?) x(\d+)$/);
+        if (multiplierMatch) {
+            cleanPart = multiplierMatch[1];
+            unitCount = parseInt(multiplierMatch[2], 10);
+        }
+
+        const cost = unitCosts[cleanPart];
+        if (cost) {
+            minerals += cost.minerals * unitCount;
+            gas += cost.gas * unitCount;
+        } else {
+            // Try to match case-insensitive if exact match fails
+            const key = Object.keys(unitCosts).find(k => k.toLowerCase() === cleanPart.toLowerCase());
+            if (key) {
+                const fuzzyCost = unitCosts[key];
+                minerals += fuzzyCost.minerals * unitCount;
+                gas += fuzzyCost.gas * unitCount;
+            }
+        }
+    });
+
+    return {
+        minerals: minerals * count,
+        gas: gas * count
+    };
+};
+
+const CostBadge = ({ minerals, gas }: { minerals: number, gas: number }) => {
+    if (minerals === 0 && gas === 0) return null;
+
+    return (
+        <div style={{ display: 'flex', gap: '8px', fontSize: '0.85rem', fontWeight: 600 }}>
+            {minerals > 0 && (
+                <span style={{ color: '#60a5fa', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                    {minerals}
+                    <div style={{ position: 'relative', width: '14px', height: '14px' }}>
+                        <Image src="/images/minerals.gif" alt="Minerals" fill style={{ objectFit: 'contain' }} />
+                    </div>
+                </span>
+            )}
+            {gas > 0 && (
+                <span style={{ color: '#4ade80', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                    {gas}
+                    <div style={{ position: 'relative', width: '14px', height: '14px' }}>
+                        <Image src="/images/gas.gif" alt="Gas" fill style={{ objectFit: 'contain' }} />
+                    </div>
+                </span>
+            )}
+        </div>
+    );
 };
 
 interface BuildDetailClientProps {
@@ -449,6 +519,10 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                 <div style={{ marginTop: '15px', fontSize: '2rem', fontFamily: 'monospace', fontWeight: 'bold', color: theme.primary }}>
                                     {build.steps[currentStep].supply} <span style={{ fontSize: '1rem', opacity: 0.7 }}>SUPPLY</span>
                                 </div>
+                                {/* Cost Display for Follow Along */}
+                                <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center' }}>
+                                    <CostBadge {...calculateStepCost(build.steps[currentStep].action)} />
+                                </div>
                             </div>
 
                             {/* Coming Up */}
@@ -526,6 +600,9 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                                 {consolidatedSteps[currentStep].notes}
                                             </p>
                                         )}
+                                        <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'center' }}>
+                                            <CostBadge {...calculateStepCost(consolidatedSteps[currentStep].action, consolidatedSteps[currentStep].count)} />
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -590,7 +667,7 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                         <div style={{ marginTop: '20px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                             Press <span style={{ border: '1px solid var(--border-medium)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>Space</span> to flip • <span style={{ border: '1px solid var(--border-medium)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>Arrows</span> to navigate
                         </div>
-                    </div>
+                    </div >
                 ) : (
                     <div className="card" style={{ padding: '0', overflow: 'hidden', border: '1px solid var(--border-subtle)' }}>
                         <div style={{ padding: '20px', borderBottom: '1px solid var(--border-subtle)', background: 'var(--bg-secondary)' }}>
@@ -604,6 +681,7 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                         <th style={{ padding: '16px 24px', textAlign: 'left', width: '80px', textTransform: 'capitalize' }}>Supply</th>
                                         <th style={{ padding: '16px 24px', textAlign: 'left', width: '80px', textTransform: 'capitalize' }}>Time</th>
                                         <th style={{ padding: '16px 24px', textAlign: 'left', textTransform: 'capitalize' }}>Action</th>
+                                        <th style={{ padding: '16px 24px', textAlign: 'left', width: '120px', textTransform: 'capitalize' }}>Cost</th>
                                         <th style={{ padding: '16px 24px', textAlign: 'left', textTransform: 'capitalize' }}>Notes</th>
                                     </tr>
                                 </thead>
@@ -618,6 +696,9 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                                             <td style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: '500' }}>
                                                 <UnitTooltip action={step.action} size="medium" />
                                                 <span>{step.action} {step.count > 1 && <span style={{ opacity: 0.7, marginLeft: '4px' }}>x{step.count}</span>}</span>
+                                            </td>
+                                            <td style={{ padding: '16px 24px' }}>
+                                                <CostBadge {...calculateStepCost(step.action, step.count)} />
                                             </td>
                                             <td style={{ padding: '16px 24px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>{step.notes || "—"}</td>
                                         </tr>
@@ -634,8 +715,9 @@ export default function BuildDetailClient({ build, raceParam }: BuildDetailClien
                             </div>
                         )}
                     </div>
-                )}
-            </div>
+                )
+                }
+            </div >
 
         </>
     );
