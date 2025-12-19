@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import { Clock } from 'lucide-react';
 import { getUnitData } from '@/data/unitData';
 import { getIconForAction } from '@/utils/icons';
+import { unitCosts } from '@/data/unitCosts';
 
 interface UnitTooltipProps {
     action: string;
@@ -85,6 +88,34 @@ export default function UnitTooltip({
                     }}
                 >
                     <div style={{ fontWeight: 'bold', color: 'white', marginBottom: '4px', fontSize: '0.9rem' }}>{unitData.name}</div>
+
+                    {unitCosts[unitData.name] && (
+                        <div style={{ display: 'flex', gap: '12px', marginBottom: '8px', fontSize: '0.8rem', fontWeight: 600, alignItems: 'center' }}>
+                            {unitCosts[unitData.name].minerals > 0 && (
+                                <span style={{ color: '#60a5fa', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                    {unitCosts[unitData.name].minerals}
+                                    <div style={{ position: 'relative', width: '12px', height: '12px' }}>
+                                        <Image src="/images/minerals.gif" alt="Minerals" fill style={{ objectFit: 'contain' }} />
+                                    </div>
+                                </span>
+                            )}
+                            {unitCosts[unitData.name].gas > 0 && (
+                                <span style={{ color: '#4ade80', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                    {unitCosts[unitData.name].gas}
+                                    <div style={{ position: 'relative', width: '12px', height: '12px' }}>
+                                        <Image src="/images/gas.gif" alt="Gas" fill style={{ objectFit: 'contain' }} />
+                                    </div>
+                                </span>
+                            )}
+                            {unitCosts[unitData.name].time > 0 && (
+                                <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                    <Clock size={12} />
+                                    {unitCosts[unitData.name].time}s
+                                </span>
+                            )}
+                        </div>
+                    )}
+
                     <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>{unitData.description}</div>
 
                     {/* Tiny arrow */}

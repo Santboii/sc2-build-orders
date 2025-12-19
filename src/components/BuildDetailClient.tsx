@@ -51,6 +51,7 @@ const formatBadgeText = (text: string): string => {
 const calculateStepCost = (action: string, count: number = 1) => {
     let minerals = 0;
     let gas = 0;
+    let time = 0;
 
     // Split by comma for multiple actions in one step (e.g. "Orbital Command,Reaper")
     const parts = action.split(',');
@@ -74,6 +75,11 @@ const calculateStepCost = (action: string, count: number = 1) => {
         if (cost) {
             minerals += cost.minerals * unitCount;
             gas += cost.gas * unitCount;
+            // For time, we take the max time if multiple different units (unlikely in one step line usually)
+            // But if it's "Marine x2", the build time "cost" is technically just the time for one marine
+            // derived from the fact that you effectively wait that long for the unit. (Queueing is a different story, but for a build order step, it signifies 'start production')
+            // So we will just take the max time of any unit in the step.
+            time = Math.max(time, cost.time);
         } else {
             // Try to match case-insensitive if exact match fails
             const key = Object.keys(unitCosts).find(k => k.toLowerCase() === cleanPart.toLowerCase());
@@ -81,23 +87,25 @@ const calculateStepCost = (action: string, count: number = 1) => {
                 const fuzzyCost = unitCosts[key];
                 minerals += fuzzyCost.minerals * unitCount;
                 gas += fuzzyCost.gas * unitCount;
+                if (fuzzyCost.time) time = Math.max(time, fuzzyCost.time);
             }
         }
     });
 
     return {
         minerals: minerals * count,
-        gas: gas * count
+        gas: gas * count,
+        time: time // We don't multiply time by count of step repetition (e.g. "x2" usually means do this twice or build 2). The duration is still the same relative to game flow.
     };
 };
 
-const CostBadge = ({ minerals, gas }: { minerals: number, gas: number }) => {
-    if (minerals === 0 && gas === 0) return null;
+const CostBadge = ({ minerals, gas, time }: { minerals: number, gas: number, time?: number }) => {
+    if (minerals === 0 && gas === 0 && (!time || time === 0)) return null;
 
     return (
-        <div style={{ display: 'flex', gap: '8px', fontSize: '0.85rem', fontWeight: 600 }}>
+        <div style={{ display: 'flex', gap: '12px', fontSize: '0.85rem', fontWeight: 600, alignItems: 'center' }}>
             {minerals > 0 && (
-                <span style={{ color: '#60a5fa', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                <span style={{ color: '#60a5fa', display: 'flex', alignItems: 'center', gap: '4px' }}>
                     {minerals}
                     <div style={{ position: 'relative', width: '14px', height: '14px' }}>
                         <Image src="/images/minerals.gif" alt="Minerals" fill style={{ objectFit: 'contain' }} />
@@ -110,6 +118,12 @@ const CostBadge = ({ minerals, gas }: { minerals: number, gas: number }) => {
                     <div style={{ position: 'relative', width: '14px', height: '14px' }}>
                         <Image src="/images/gas.gif" alt="Gas" fill style={{ objectFit: 'contain' }} />
                     </div>
+                </span>
+            )}
+            {time && time > 0 && (
+                <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px', marginLeft: '4px' }} title="Build Time">
+                    <Clock size={14} />
+                    {time}s
                 </span>
             )}
         </div>
